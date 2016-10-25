@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "tom031.github.io"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Tom Dinh"]
   spec.email         = ["tomdinhnz@gmail.com"]
 
-  spec.summary       = "A Jekyll theme by Tom"
+  spec.summary       = "A Jekyll theme by Tom Dinh"
   spec.homepage      = "https://tom031.github.io"
   spec.license       = "MIT"
 
