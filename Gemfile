@@ -16,6 +16,10 @@ gem 'tom031-github-io', '~> 0.1.0'
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
+# this need to track theme development
+gemspec
+
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
