@@ -1,10 +1,11 @@
-html, body {    
+html, body {
     font-size: 14px;
     height: 100%;
-    padding-left: 100px;    
-    padding-bottom:10px;    
+    padding-left: 100px;
+    padding-bottom:10px;
     padding-right: 10px;
 }
 md-toobar .md-toolbar-tools {
     font-weight:400;
+    font-size: 1.250em;
 }
