@@ -1,5 +1,19 @@
 ---
 layout: default
 ---
+<h3>{{page.title}}</h3>
 
-{{ content }}
+
+<div class="row">
+  {{ content }}
+</div>
+
+<h4>Recent Writtings</h4>
+<p>
+  Here are some articles for you while you are waitting for this page to be built:
+</p>
+<ul>
+  {% for post in site.related_posts limit: 10 %}
+    <li><a href="{{ post.url }}">{{post.title}}</a></li>
+  {% endfor %}
+</ul>
