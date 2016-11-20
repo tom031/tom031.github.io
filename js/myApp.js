@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngMaterial','ngAnimate']);
+var app = angular.module('app', ['ngMaterial','ngAnimate','ngMdIcons']);
 app.controller('appCtrl', function ($scope, $mdSidenav) {
 $scope.open = 0;
 var isShowRightContent = false;
