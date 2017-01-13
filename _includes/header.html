@@ -1,16 +1,16 @@
 <header>
     <md-toolbar>
         <div class="md-toolbar-tools">
-            <md-button aria-label="Logo">
-                Logo
-            </md-button>
+          <a href="https://nz.linkedin.com/in/tomdinhnz"> <md-button aria-label="Logo">
+                <ng-md-icon icon="person_pin" style="fill:#abcdef" size="50"></ng-md-icon>
+            </md-button></a>
             <h2>
-                <span>{{site.title}}</span>
+                  <a href="/"><span>{{site.title}}</span></a>
             </h2>
-            <span flex></span>
+            <span flex></span> <!-- this for push the menu button to the right-->
             <md-button id="toggleSidenav" ng-click="isShowRightContent = !isShowRightContent"
-              class="md-icon-button" aria-label="Favorite">
-                <ng-md-icon icon="menu" style="fill:#abcdef" size="30"></ng-md-icon> 
+              class="md-icon-button" aria-label="Menu">
+                <ng-md-icon icon="swap_horiz" style="fill:#abcdef" size="35"></ng-md-icon>
             </md-button>
         </div>
     </md-toolbar>

@@ -7,5 +7,5 @@ var isShowRightContent = false;
  } else {
    $scope.open =1
  }
- console.log(isShowRightContent);
+ //console.log(isShowRightContent);
 });

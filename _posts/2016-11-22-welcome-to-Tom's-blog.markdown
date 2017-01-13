@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Comming soon"
+title:  "Coming soon"
 date:   2016-11-22
 categories:
 ---
-Comming soon 
+Coming soon
