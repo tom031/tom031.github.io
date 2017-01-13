@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
+
 <body ng-cloak ng-app="app">
     <div layout="row" layout-xs="column" ng-controller="appCtrl">
         <div class="" flex>
-            {% include header.html %}
-            
-
-
-            {{ content }}
-
-
-            {% include footer.html %}
+            {% include header.html %} {{ content }} {% include footer.html %}
         </div>
-        {%include rightSideNav.html%}
+        {%include rightSideNav.html %}
     </div>
+    {%include jsLib.html %}
 </body>
+
 </html>
