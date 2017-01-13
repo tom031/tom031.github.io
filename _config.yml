@@ -14,12 +14,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Tom's journey to the Code
-email: tomdinhnz@gmail.com
 description: Development journey of Tom
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
+
+#infor
+fullname: Tom Dinh
 twitter_username: tomdinhnz
+twitter_link: ""
 github_username:  tom031
+github_link: ""
+email: tomdinhnz@gmail.com
+
 
 # Build settings
 markdown: kramdown
