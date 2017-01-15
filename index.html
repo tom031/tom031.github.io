@@ -8,21 +8,34 @@ layout: default
 
 <h3>this place for my awesome recent works</h3>
 <md-divider ></md-divider>
-<div class="home">
-  <ul class="post-list">
-    {% for post in site.posts limit: 5 %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<!--This is posts render-->
+<md-content>
+    <md-card>
+        My blog
+      <md-card-content>      
+      <div class="home">
+        <ul class="post-list">
+          {% for post in site.posts limit: 5 %}
+            <li>
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+              </h2>
+              <p>
+                {{ post.content | truncatewords:43 }}
+              </p>
+              <md-card-actions layout ="row" layout-align="end center">
+                  <a href="{{ post.url | prepend: site.baseurl}}">see more ...</a>
+              </md-card-actions>
+              <md-divider ></md-divider>
+            </li>
+          {% endfor %}
+        </ul>
+        </md-card-content>
+    </md-card>
+</md-content>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-        <p>
-          {{ post.content | truncatewords:43 }}
-        </p>
-      </li>
-    {% endfor %}
-  </ul>
+
 <!--
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 -->
