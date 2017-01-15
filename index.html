@@ -1,11 +1,16 @@
 ---
 layout: default
 ---
+<md-divider ></md-divider>
+<h3>this place for my handsome pictures cropped my friends out</h3>
+<md-divider ></md-divider>
 
+
+<h3>this place for my awesome recent works</h3>
+<md-divider ></md-divider>
 <div class="home">
-
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in site.posts limit: 5 %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -18,7 +23,7 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-
+<!--
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+-->
 </div>
