@@ -32,4 +32,4 @@ sof: stackoverflow.com/users/6716449/tom031
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-slate
