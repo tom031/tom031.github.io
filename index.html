@@ -1,12 +1,19 @@
 ---
 layout: default
 ---
-<md-divider ></md-divider>
-<h3>this place for my handsome pictures cropped my friends out</h3>
-<md-divider ></md-divider>
 
-
-<h3>this place for my awesome recent works</h3>
+<md-divider ></md-divider>
+<div layout="row" layout-xs="column">
+  <div flex="66" flex-xs="100" layout-fill style="min-height: 200px;" >
+    <h3>this place for my handsome pictures cropped my friends out</h3>
+    {% include slideshow.html %}
+  </div>
+  <md-divider></md-divider>
+  <div flex="33" layout-fill flex-xs="100">
+    <md-divider></md-divider>
+    <h3>this place for my awesome recent works</h3>
+  </div>
+</div>
 <md-divider ></md-divider>
 <!--This is posts render-->
 <md-content>
@@ -33,6 +40,6 @@ layout: default
         </ul>
         </md-card-content>
     </md-card>
-</md-content> 
+</md-content>
 
 </div>
