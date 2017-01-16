@@ -10,3 +10,6 @@ md-toobar .md-toolbar-tools {
 }
 md-content {
   min-height: calc(93vh - 80px)
+}
+
+.rss-subscribe { float : right}

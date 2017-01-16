@@ -1,31 +1,30 @@
 <footer>
-  <h6> <a href="https://www.linkedin.com/in/tomdinhnz"><ng-md-icon icon="copyright" style="fill:#abcdef" size="15"></ng-md-icon>{{site.fullname}}. </a>
+  <h6> <a href="{{site.linkedin}}"><ng-md-icon icon="copyright" style="fill:#abcdef" size="15"></ng-md-icon>{{site.fullname}}. </a>
     Hosted by <a href="https://pages.github.com/"><ng-md-icon icon="github-box" style="fill:#abcdef" size="15"></ng-md-icon></a>
     Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://angularjs.org/">AngularJS</a>
   </h6>
   <md-divider ></md-divider>
   <div class="row">
-    <a href="https://www.github.com/tom031">
+    <a href="{{site.github_link}}">
         <md-button aria-label="github">
             <ng-md-icon icon="github-circle" style="fill:#abcdef" size="20"></ng-md-icon>
         </md-button>
     </a>
-    <a href="https://www.linkedin.com/in/tomdinhnz">
+    <a href="{{site.linkedin}}">
         <md-button aria-label="linkedin">
             <ng-md-icon icon="linkedin-box" style="fill:#abcdef" size="20"></ng-md-icon>
         </md-button>
     </a>
-    <a href="https://www.twitter.com/tomdinhnz">
+    <a href="{{site.twitter_link}}">
         <md-button aria-label="twitter">
             <ng-md-icon icon="twitter" style="fill:#abcdef" size="20"></ng-md-icon>
         </md-button>
     </a>
-    <a href="https://www.stackoverflow.com/users/6716449/tom031">
+    <a href="{{site.sof}}">
         <md-button aria-label="sof">
             <ng-md-icon icon="code" style="fill:#abcdef" size="20"></ng-md-icon>
         </md-button>
     </a>
-    <span flex></span>
     <span class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></span>
   </div>
 
