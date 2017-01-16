@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-
 <body ng-cloak ng-app="app">
     <div layout="row" layout-xs="column" ng-controller="appCtrl">
         <div class="" flex>
@@ -16,12 +15,9 @@
             </md-content>
 
             <!--this is footer render-->
-            <md-content class="md-padding" layout-xs="column" layout="row">
-                <md-card flex>
-                  {% include footer.html %}
-                </md-card>
-            </md-content>
-
+            <md-card flex>
+                {% include footer.html %}
+            </md-card>
         </div>
         {%include rightSideNav.html %}
     </div>

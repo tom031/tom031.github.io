@@ -4,6 +4,7 @@
     Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://angularjs.org/">AngularJS</a>
   </h6>
   <md-divider ></md-divider>
+  <div class="row">
     <a href="https://www.github.com/tom031">
         <md-button aria-label="github">
             <ng-md-icon icon="github-circle" style="fill:#abcdef" size="20"></ng-md-icon>
@@ -24,4 +25,8 @@
             <ng-md-icon icon="code" style="fill:#abcdef" size="20"></ng-md-icon>
         </md-button>
     </a>
+    <span flex></span>
+    <span class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></span>
+  </div>
+
 </footer>

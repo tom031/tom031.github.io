@@ -8,3 +8,5 @@ md-toobar .md-toolbar-tools {
     font-weight:400;
     font-size: 1.250em;
 }
+md-content {
+  min-height: calc(93vh - 80px)
