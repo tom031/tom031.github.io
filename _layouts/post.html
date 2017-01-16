@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
+
 <h3>{{page.title}}</h3>
+<span class="post-meta">{{ page.date | date: "%b %-d, %Y" }} • {{ page.author }} • <a href="https://tom031.github.io{{ post.url }}#disqus_thread">0 Comments</a></span>
 <div class="row">
   {{ content }}
 </div>
@@ -9,11 +11,18 @@ layout: default
 <br>
 <md-divider ></md-divider>
 <h4>Recent Writtings</h4>
-<p>
-    Here are some articles for you while you are waitting for this page to be built:
-</p>
-<ul>
-    {% for post in site.related_posts limit: 5 %}
-    <li><a href="{{ post.url }}">{{post.title}}</a> : <h6><i>{{ post.content | truncatewords:23 }}</i></h6> </li>
-    {% endfor %}
-</ul>
+<h4>
+  <p>
+      Here are some articles for you while you are waitting for this page to be built:
+  </p>
+  <ul>
+      {% for post in site.related_posts limit: 5 %}
+      <li><a href="{{ post.url }}">{{post.title}}</a>
+        <h6><span><i>{{ post.content | truncatewords:23 }}</i></span></h6>
+      </li>
+      {% endfor %}
+  </ul>
+</h4>
+
+<md-divider ></md-divider>
+{% include disqus.html %}

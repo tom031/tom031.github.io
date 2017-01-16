@@ -196,6 +196,10 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 115)
+  jekyll-feed
+  jekyll-mentions
+  jekyll-sitemap
+  jemoji
 
 RUBY VERSION
    ruby 2.3.1p112

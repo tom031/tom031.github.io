@@ -12,12 +12,12 @@ layout: default
 <md-content>
     <md-card>
         My blog
-      <md-card-content>      
+      <md-card-content>
       <div class="home">
         <ul class="post-list">
           {% for post in site.posts limit: 5 %}
             <li>
-              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} • {{ post.author }} • <a href="https://tom031.github.io{{ post.url }}#disqus_thread">0 Comments</a></span>
               <h2>
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
               </h2>
@@ -36,7 +36,7 @@ layout: default
 </md-content>
 
 
-<!--
+
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
--->
+
 </div>
