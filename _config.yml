@@ -1,5 +1,5 @@
 title: Tom's journey to the Code
-description: Development journey of Tom
+description: I want to build my own blog, so this is it.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
@@ -37,7 +37,7 @@ defaults:
 disqus: tom031
 markdown: kramdown
 theme: minima
-highlighter: pygments
+highlighter: rouge
 permalink: /posts/:year/:month/:day/:title/
 gem:
   - jekyll-sitemap
