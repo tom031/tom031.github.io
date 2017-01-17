@@ -34,6 +34,7 @@ defaults:
       tags: "code"
 
 # Build settings
+favicon: /images/favicon.ico
 disqus: tom031-github-blog
 markdown: kramdown
 theme: minima
