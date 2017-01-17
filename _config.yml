@@ -34,7 +34,7 @@ defaults:
       tags: "code"
 
 # Build settings
-disqus: tom031
+disqus: tom031-github-blog
 markdown: kramdown
 theme: minima
 highlighter: rouge
