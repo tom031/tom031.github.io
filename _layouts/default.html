@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
+
 <body ng-cloak ng-app="app">
     <div layout="row" layout-xs="column" ng-controller="appCtrl">
         <div class="" flex>
@@ -22,6 +23,10 @@
         {%include rightSideNav.html %}
     </div>
     {% include jsLib.html %}
+    {% if jekyll.environment == 'production' %}
+    {% include googleAnalytics.html %}
+    {% endif %}
+
 </body>
 
 </html>

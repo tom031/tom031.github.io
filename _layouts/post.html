@@ -25,4 +25,6 @@ layout: default
 </h4>
 
 <md-divider ></md-divider>
+{% if jekyll.environment == 'production' %}
 {% include disqus.html %}
+{% endif %}
