@@ -4,19 +4,18 @@ layout: default
 
 <md-divider ></md-divider>
 <div layout="row" layout-xs="column">
-  <div flex="66" flex-xs="100" layout-fill style="min-height: 200px;" >
-    <h3>this place for my handsome pictures cropped my friends out</h3>
+  <div flex="66" flex-xs="100" layout-fill class="slideshowFrame">
     {% include slideshow.html %}
   </div>
   <md-divider></md-divider>
-  <div flex="33" layout-fill flex-xs="100">
-    <md-divider></md-divider>
+  <div flex="auto" flex-xs="100" md-whiteframe="1">
+
     <h3>this place for my awesome recent works</h3>
   </div>
 </div>
 <md-divider ></md-divider>
 <!--This is posts render-->
-<md-content>
+<md-content md-whiteframe="1">
     <md-card>
         My blog
       <md-card-content>
@@ -41,5 +40,4 @@ layout: default
         </md-card-content>
     </md-card>
 </md-content>
-
 </div>

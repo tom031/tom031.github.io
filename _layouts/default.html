@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!--this is head render with CSS and Favicon-->
 {% include head.html %}
 
 <body ng-cloak ng-app="app">
@@ -9,7 +10,7 @@
             {% include header.html %}
 
             <!--this is body render-->
-            <md-content>
+            <md-content md-whiteframe="14">
                 <md-card>
                     {{ content }}
                 </md-card>
@@ -20,13 +21,14 @@
                 {% include footer.html %}
             </md-card>
         </div>
+        <!--this is Side nav render-->
         {%include rightSideNav.html %}
     </div>
+    <!--this is JS files render-->
     {% include jsLib.html %}
     {% if jekyll.environment == 'production' %}
     {% include googleAnalytics.html %}
     {% endif %}
-
 </body>
 
 </html>

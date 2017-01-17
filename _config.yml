@@ -6,13 +6,14 @@ url: "" # the base hostname & protocol for your site
 #infor
 fullname: Tom Dinh
 twitter_username: tomdinhnz
-twitter_link: twitter.com/tomdinhnz
+twitter_link: https://twitter.com/tomdinhnz
 github_username:  tom031
-github_link: github.com/tom031
-linkedin: linkedin.com/in/tomdinhnz
+github_link: https://github.com/tom031
+linkedin: https://linkedin.com/in/tomdinhnz
 skype: tomdinhnz
 email: tomdinhnz@gmail.com
-sof: stackoverflow.com/users/6716449/tom031
+sof: https://stackoverflow.com/users/6716449/tom031
+slideshare: http://www.slideshare.net/dinhmanhhoang
 
 #External resources
 disqus: tom031-github-blog
@@ -22,20 +23,18 @@ avatar: http://s.gravatar.com/avatar/31793858d3a0ca4af25a1feb8b50a498?s=60
 
 #default setting for Front Matter
 defaults:
-  -
-    scope:
-      path: "posts" # default setting for Front Matter for all posts
-      type: ""
+  - scope:
+      path: posts # default setting for Front Matter for all posts
+      type: posts
     values:
-      author: "Tom Dinh"
-      layout: "post"
-      title: "Tom Dinh's Blog"
+      layout: post
+      title: Tom Dinh's Blog
       permalink: ""
-      published: "false"
-      date : "2017-1-1"
-      category: "blog"
+      published: false
+      date : 2017-1-1
+      category: blog
       categories: jekyll, github, pages
-      tags: "code"
+      tags: code
 
 
 # Build settings
@@ -44,6 +43,7 @@ markdown: kramdown
 theme: minima
 highlighter: rouge
 permalink: /posts/:year/:month/:day/:title/
+version: 1.0.1
 gem:
   - jekyll-sitemap
   - jemoji

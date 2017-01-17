@@ -5,7 +5,7 @@ html, body {
     padding-right: 10px;
 }
 
-md-toobar .md-toolbar-tools {
+md-toobar.md-toolbar-tools {
     font-weight: 400;
     font-size: 1.250em;
 }
@@ -20,4 +20,17 @@ md-content {
 
 .description {
     text-align: center;
+}
+
+div.slideshowFrame {
+    min-height: 220px;
+    min-width: 300px;
+}
+
+img.slideshowPics {
+    max-height: 220px;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
