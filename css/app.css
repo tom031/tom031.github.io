@@ -1,15 +1,23 @@
 html, body {
     font-size: 14px;
     height: 100%;
-    padding-bottom:10px;
+    padding-bottom: 10px;
     padding-right: 10px;
 }
+
 md-toobar .md-toolbar-tools {
-    font-weight:400;
+    font-weight: 400;
     font-size: 1.250em;
 }
+
 md-content {
-  min-height: calc(93vh - 80px)
+    min-height: calc(93vh - 80px);
 }
 
-.rss-subscribe { float : right}
+.rss-subscribe {
+    float: right;
+}
+
+.description {
+    text-align: center;
+}
