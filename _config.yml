@@ -40,16 +40,19 @@ defaults:
 # Build settings
 favicon: /images/favicon.ico
 markdown: kramdown
+paginate: 5
+paginate_path: /pages/page:num/
 theme: minima
 highlighter: rouge
-permalink: /posts/:year/:month/:day/:title/
+permalink: /posts/:title #permalink in the front matter of your blog page will cause pagination to break
 version: 1.0.1
-gem:
+gems:
   - jekyll-sitemap
   - jemoji
   - jekyll-feed
   - jekyll-mentions
   - jekyll-redirect-from
+  - jekyll-paginate
 
 exclude:
   - Gemfile

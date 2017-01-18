@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <md-divider ></md-divider>
 <div layout="row" layout-xs="column">
   <div flex="66" flex-xs="100" layout-fill class="slideshowFrame">
@@ -20,7 +19,7 @@ layout: default
       <md-card-content>
       <div class="home">
         <ul class="post-list">
-          {% for post in site.posts limit: 5 %}
+          {% for post in paginator.posts %}
             <li>
               <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} • {{ post.author }} • <a href="https://tom031.github.io{{ post.url }}#disqus_thread">0 Comments</a></span>
               <h2>
@@ -39,4 +38,5 @@ layout: default
         </md-card-content>
     </md-card>
 </md-content>
+  {% include pagination.html %}
 </div>
