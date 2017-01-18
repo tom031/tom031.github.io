@@ -3,7 +3,7 @@ app.controller('appCtrl', function($scope, $mdSidenav) {
 });
 app.directive('tabsAutoplay', function($interval) {
     return {
-        restrict: 'A',
+        restrict: 'A,E',
         require: 'mdTabs',
         link: function(scope, elm, attrs, mdTabsCtrl) {
             var defaultDelay = 2000,
