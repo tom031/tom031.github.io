@@ -1,5 +1,28 @@
 var app = angular.module('app', ['ngMaterial', 'ngAnimate', 'ngMdIcons']);
-app.controller('appCtrl', function($scope, $mdSidenav) {
+app.controller('appCtrl', function($scope, $mdSidenav, $log, $mdMedia) {
+    var isOpenRight;
+    $scope.buttonSidenav = $scope.$watch(
+      function() {
+            return $mdMedia('gt-md');
+        },
+        function(openOrNot) {
+          $scope.buttonSidenav = openOrNot;
+        });
+    $scope.openSidenav = function() {
+        $mdSidenav('right').open().then(function(isOpenRight = true) {
+            $log.debug("close RIGHT is done");
+            console.log("true isOpenRight", isOpenRight);
+
+        });
+    };
+    $scope.closeSidenav = function() {
+        $mdSidenav('right').close().then(function(isOpenRight = false) {
+            $log.debug("close RIGHT is done");
+            console.log("false isOpenRight", isOpenRight);
+            //$scope.isOpenRight = false;
+        });
+
+    };
 });
 app.directive('tabsAutoplay', function($interval) {
     return {

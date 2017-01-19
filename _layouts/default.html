@@ -5,24 +5,28 @@
 
 <body ng-cloak ng-app="app">
     <div layout="row" layout-xs="column" ng-controller="appCtrl">
-        <div class="" flex>
-            <!-- this is header render-->
-            {% include header.html %}
+        <md-button style="position: fixed;" id="toggleSidenav" ng-hide="buttonSidenav" ng-click="openSidenav()" class="md-fab md-fab-top-right" aria-label="Menu">
+            <ng-md-icon class="icon" icon="menu"></ng-md-icon>
+        </md-button>
+            <div flex layout="column">
+                <!-- this is header render-->
+                {% include header.html %}
 
-            <!--this is body render-->
-            <md-content md-whiteframe="14">
-                <md-card>
-                    {{ content }}
+                <!--this is body render-->
+                <md-content md-whiteframe="14">
+                    <md-card>
+                        {{ content }}
+                    </md-card>
+                </md-content>
+
+                <!--this is footer render-->
+                <md-card flex>
+                    {% include footer.html %}
                 </md-card>
-            </md-content>
+            </div>
 
-            <!--this is footer render-->
-            <md-card flex>
-                {% include footer.html %}
-            </md-card>
-        </div>
-        <!--this is Side nav render-->
-        {%include rightSideNav.html %}
+            <!--this is Side nav render-->
+            {%include rightSideNav.html %}
     </div>
     <!--this is JS files render-->
     {% include jsLib.html %}
@@ -30,5 +34,4 @@
     {% include googleAnalytics.html %}
     {% endif %}
 </body>
-
 </html>

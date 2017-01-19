@@ -5,13 +5,19 @@ html, body {
     padding-right: 10px;
 }
 
+md-sidenav-right {
+    height: 100%;
+}
+
 md-toobar.md-toolbar-tools {
     font-weight: 400;
     font-size: 1.250em;
 }
 
 md-content {
-    min-height: calc(93vh - 80px);
+    min-height: calc(90vh - 80px);    
+    margin-top: 50px;
+
 }
 
 .rss-subscribe {
@@ -48,4 +54,26 @@ div.moreposts {
 
 div.pagination {
     text-align: center;
+}
+
+.floatfab {
+    position: absolute;
+    overflow: auto;
+}
+
+.icon {
+    fill: #abcdef;
+    text-align: justify;
+    font-size: 25;
+}
+
+md-backdrop.md-opaque {
+    position: fixed
+}
+
+.header-toolbal {
+    position: fixed;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    top: 0px;
 }
