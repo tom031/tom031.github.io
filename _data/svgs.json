@@ -1,0 +1,38 @@
+{
+    "jekyll": {
+        "svg_path": "/images/icons/jekyll.svg"
+    },
+    "azure": {
+        "svg_path": "/images/icons/azure.svg"
+    },
+    "angular": {
+        "svg_path": "/images/icons/angular.svg"
+    },
+    "sof": {
+        "svg_path": "/images/icons/stackoverflow.svg"
+    },
+    "rss": {
+        "svg_path": "/images/icons/rss.svg"
+    },
+    "codepen": {
+        "svg_path": "/images/icons/codepen.svg"
+    },
+    "coderhead": {
+        "svg_path": "/images/icons/coder-head.svg"
+    },
+    "facebook": {
+        "svg_path": "/images/icons/facebook.svg"
+    },
+    "flicker": {
+        "svg_path": "/images/icons/flikr.svg"
+    },
+    "instagram": {
+        "svg_path": "/images/icons/instagram.svg"
+    },
+    "skype": {
+        "svg_path": "/images/icons/skype.svg"
+    },
+    "slideshare": {
+        "svg_path": "/images/icons/slideshare.svg"
+    }
+}
