@@ -1,31 +1,32 @@
 <footer md-whiteframe="2">
-  <h6> <a href="{{site.linkedin}}"><ng-md-icon icon="copyright" style="fill:#abcdef" size="15"></ng-md-icon>{{site.fullname}}. </a>
-    Hosted by <a href="https://pages.github.com/"><ng-md-icon icon="github-box" style="fill:#abcdef" size="15"></ng-md-icon></a>
-    Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://angularjs.org/">AngularJS</a>
+    <h6> <a href="{{site.linkedin}}"><ng-md-icon icon="copyright" class="icon"></ng-md-icon>{{site.fullname}}. </a>
+    Hosted by <a href="https://pages.github.com/"><ng-md-icon icon="github-box" class="icon"></ng-md-icon></a>
+    Powered by <a href="https://jekyllrb.com/"><md-icon md-svg-src="{{site.icons_link}}jekyll.svg" class="icon"></md-icon></a>
+     and <a href="https://angularjs.org/"><md-icon md-svg-src="{{site.icons_link}}angular.svg" class="icon"></md-icon></a>
   </h6>
-  <md-divider ></md-divider>
-  <div class="row">
-    <a href="{{site.github_link}}">
-        <md-button aria-label="github">
-            <ng-md-icon icon="github-circle" class="icon"></ng-md-icon>
-        </md-button>
-    </a>
-    <a href="{{site.linkedin}}">
-        <md-button aria-label="linkedin">
-            <ng-md-icon icon="linkedin-box" class="icon"></ng-md-icon>
-        </md-button>
-    </a>
-    <a href="{{site.twitter_link}}">
-        <md-button aria-label="twitter">
-            <ng-md-icon icon="twitter" class="icon"></ng-md-icon>
-        </md-button>
-    </a>
-    <a href="{{site.sof}}">
-        <md-button aria-label="sof">
-            <ng-md-icon icon="code" class="icon"></ng-md-icon>
-        </md-button>
-    </a>
-    <span class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></span>
-  </div>
+    <md-divider></md-divider>
+    <div class="row">
+        <a href="{{site.github_link}}">
+            <md-button aria-label="github">
+                <ng-md-icon icon="github-circle" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="{{site.linkedin}}">
+            <md-button aria-label="linkedin">
+                <ng-md-icon icon="linkedin-box" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="{{site.twitter_link}}">
+            <md-button aria-label="twitter">
+                <ng-md-icon icon="twitter" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="{{site.sof}}">
+            <md-button aria-label="sof">
+                <md-icon md-svg-src="{{site.icons_link}}stackoverflow.svg" ></md-icon>
+            </md-button>
+        </a>
+        <span class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></span>
+    </div>
 
 </footer>

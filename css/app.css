@@ -15,7 +15,7 @@ md-toobar.md-toolbar-tools {
 }
 
 md-content {
-    min-height: calc(90vh - 80px);    
+    min-height: calc(90vh - 80px);
     margin-top: 50px;
 
 }
@@ -62,10 +62,14 @@ div.pagination {
 }
 
 .icon {
-    fill: #abcdef;
     text-align: justify;
     font-size: 25;
 }
+.iconextenal{
+  margin-bottom: 2px;
+}
+
+
 
 md-backdrop.md-opaque {
     position: fixed
