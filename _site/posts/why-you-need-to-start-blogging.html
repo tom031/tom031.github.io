@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<!--this is head render with CSS and Favicon  ng-click="openSidenav()"-->
+﻿<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>First post</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images\icons\favicon2.ico" >
+    <script type="text/javascript" src="//secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+</head>
+
+
+<body ng-cloak ng-app="app">
+    <div layout="row" layout-xs="column" ng-controller="appCtrl">
+        <!-- this is Menu button render-->
+      <md-fab-speed-dial style="position: fixed;" ng-hide="buttonSidenav" class="md-fling md-fab-top-right"
+id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
+    <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-warn">
+            <ng-md-icon class="icon" icon="menu"></ng-md-icon>
+        </md-button>
+    </md-fab-trigger>
+</md-fab-speed-dial>
+
+        <div flex layout="column">
+            <!-- this is header render-->
+            <header>
+    <md-toolbar class="header-toolbal">
+        <div class="md-toolbar-tools">
+            <a href="https://linkedin.com/in/tomdinhnz">
+                <md-button aria-label="Logo">
+                    <img src="http://s.gravatar.com/avatar/31793858d3a0ca4af25a1feb8b50a498?s=60"></img>
+                </md-button>
+            </a>
+            <h2>
+                  <a href="/"><span>Tom's journey to the Code</span></a>
+            </h2>
+        </div>
+    </md-toolbar>
+</header>
+
+
+            <!--this is body render-->
+            <md-content md-whiteframe="14">
+                <md-card>
+                    <md-card>
+  <h3>First post</h3>
+  <span class="post-meta">Nov 18, 2016 •  • <a href="https://tom031.github.io#disqus_thread">0 Comments</a></span>
+  <div class="row" >
+    <p>“I would advise folks in software to do one thing, and that’s write. Learn how to write…It’s actually useful. You need to know how to express yourself. And it’s really tough for a lot of engineers to step up and do public speaking.”</p>
+
+<p>“You don’t need to stop being a hardcore coder. Just add a little sprinkle of skills to express yourself.”</p>
+
+<p>Mike Borozdin, an ex-Microsoft engineer.</p>
+
+  </div>
+  <md-divider></md-divider>
+</md-card>
+<div md-whiteframe="1" class="moreposts">
+  <h4>Recent Writtings</h4>
+  <h4>
+    <ul>
+        
+        <li>
+          <a href="/posts/welcome-to-Tom's-blog">Coming soon</a>
+          <h5><span><i>Coming soon
+</i></span></h5>
+        </li>
+        
+    </ul>
+  </h4>
+  <md-divider ></md-divider>
+</div>
+
+
+
+                </md-card>
+            </md-content>
+
+            <!--this is footer render-->
+            <md-card flex>
+                <footer md-whiteframe="2">
+    <h6> <a href="https://linkedin.com/in/tomdinhnz"><ng-md-icon icon="copyright" class="icon"></ng-md-icon>Tom Dinh. </a>
+    Hosted by <a href="https://pages.github.com/"><ng-md-icon icon="github-box" class="icon"></ng-md-icon></a>
+    Powered by <a href="https://jekyllrb.com/"><md-icon md-svg-src="images\icons\jekyll.svg" class="icon"></md-icon></a>
+     and <a href="https://angularjs.org/"><md-icon md-svg-src="images\icons\angular.svg" class="icon"></md-icon></a>
+  </h6>
+    <md-divider></md-divider>
+    <div class="row">
+        <a href="https://github.com/tom031">
+            <md-button aria-label="github">
+                <ng-md-icon icon="github-circle" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://linkedin.com/in/tomdinhnz">
+            <md-button aria-label="linkedin">
+                <ng-md-icon icon="linkedin-box" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://twitter.com/tomdinhnz">
+            <md-button aria-label="twitter">
+                <ng-md-icon icon="twitter" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://stackoverflow.com/users/6716449/tom031">
+            <md-button aria-label="sof">
+                <md-icon md-svg-src="images\icons\stackoverflow.svg" ></md-icon>
+            </md-button>
+        </a>
+        <span class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></span>
+    </div>
+
+</footer>
+
+            </md-card>
+        </div>
+
+        <!--this is Side nav render-->
+        ﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')" >
+    <md-list>
+      <a href="/about"><md-list-item class="md-3-line" ng-click="null">
+        <h3>About</h3>
+      </md-list-item></a>
+      <md-divider ></md-divider>
+      <md-list-item class="md-3-line" ng-click="null">
+          <h3>Blog link address</h3>
+      </md-list-item>
+      <md-divider ></md-divider>
+      <md-list-item class="md-3-line" ng-click="null">
+          <h3> Contact page</h3>
+      </md-list-item>
+      <md-divider ></md-divider>
+    </md-list >
+    <span flex></span>
+    <h4 class="description" style=" float: right">I want to build my own blog, so this is it.</h4>
+</md-sidenav>
+
+    </div>
+    <!--this is JS files render-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+<script id="dsq-count-scr" src="//tom031.disqus.com/count.js" async></script>
+<script src="/js/myApp.js"></script>
+ 
+</body>
+
+</html>

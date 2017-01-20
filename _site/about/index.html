@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<!--this is head render with CSS and Favicon  ng-click="openSidenav()"-->
+﻿<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>About</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images\icons\favicon2.ico" >
+    <script type="text/javascript" src="//secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+</head>
+
+
+<body ng-cloak ng-app="app">
+    <div layout="row" layout-xs="column" ng-controller="appCtrl">
+        <!-- this is Menu button render-->
+      <md-fab-speed-dial style="position: fixed;" ng-hide="buttonSidenav" class="md-fling md-fab-top-right"
+id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
+    <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-warn">
+            <ng-md-icon class="icon" icon="menu"></ng-md-icon>
+        </md-button>
+    </md-fab-trigger>
+</md-fab-speed-dial>
+
+        <div flex layout="column">
+            <!-- this is header render-->
+            <header>
+    <md-toolbar class="header-toolbal">
+        <div class="md-toolbar-tools">
+            <a href="https://linkedin.com/in/tomdinhnz">
+                <md-button aria-label="Logo">
+                    <img src="http://s.gravatar.com/avatar/31793858d3a0ca4af25a1feb8b50a498?s=60"></img>
+                </md-button>
+            </a>
+            <h2>
+                  <a href="/"><span>Tom's journey to the Code</span></a>
+            </h2>
+        </div>
+    </md-toolbar>
+</header>
+
+
+            <!--this is body render-->
+            <md-content md-whiteframe="14">
+                <md-card>
+                    This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+
+You can find the source code for the Jekyll new theme at:
+<a href="https://github.com/jekyll"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">jekyll</span></a>
+ /
+[minima](https://github.com/jekyll/minima)
+
+You can find the source code for Jekyll at
+<a href="https://github.com/jekyll"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">jekyll</span></a>
+ /
+[jekyll](https://github.com/jekyll/jekyll)
+
+
+                </md-card>
+            </md-content>
+
+            <!--this is footer render-->
+            <md-card flex>
+                <footer md-whiteframe="2">
+    <h6> <a href="https://linkedin.com/in/tomdinhnz"><ng-md-icon icon="copyright" class="icon"></ng-md-icon>Tom Dinh. </a>
+    Hosted by <a href="https://pages.github.com/"><ng-md-icon icon="github-box" class="icon"></ng-md-icon></a>
+    Powered by <a href="https://jekyllrb.com/"><md-icon md-svg-src="images\icons\jekyll.svg" class="icon"></md-icon></a>
+     and <a href="https://angularjs.org/"><md-icon md-svg-src="images\icons\angular.svg" class="icon"></md-icon></a>
+  </h6>
+    <md-divider></md-divider>
+    <div class="row">
+        <a href="https://github.com/tom031">
+            <md-button aria-label="github">
+                <ng-md-icon icon="github-circle" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://linkedin.com/in/tomdinhnz">
+            <md-button aria-label="linkedin">
+                <ng-md-icon icon="linkedin-box" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://twitter.com/tomdinhnz">
+            <md-button aria-label="twitter">
+                <ng-md-icon icon="twitter" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://stackoverflow.com/users/6716449/tom031">
+            <md-button aria-label="sof">
+                <md-icon md-svg-src="images\icons\stackoverflow.svg" ></md-icon>
+            </md-button>
+        </a>
+        <span class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></span>
+    </div>
+
+</footer>
+
+            </md-card>
+        </div>
+
+        <!--this is Side nav render-->
+        ﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')" >
+    <md-list>
+      <a href="/about"><md-list-item class="md-3-line" ng-click="null">
+        <h3>About</h3>
+      </md-list-item></a>
+      <md-divider ></md-divider>
+      <md-list-item class="md-3-line" ng-click="null">
+          <h3>Blog link address</h3>
+      </md-list-item>
+      <md-divider ></md-divider>
+      <md-list-item class="md-3-line" ng-click="null">
+          <h3> Contact page</h3>
+      </md-list-item>
+      <md-divider ></md-divider>
+    </md-list >
+    <span flex></span>
+    <h4 class="description" style=" float: right">I want to build my own blog, so this is it.</h4>
+</md-sidenav>
+
+    </div>
+    <!--this is JS files render-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+<script id="dsq-count-scr" src="//tom031.disqus.com/count.js" async></script>
+<script src="/js/myApp.js"></script>
+ 
+</body>
+
+</html>

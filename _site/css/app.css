@@ -1,0 +1,83 @@
+html, body {
+    font-size: 14px;
+    height: 100%;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+md-sidenav-right {
+    height: 100%;
+}
+
+md-toobar.md-toolbar-tools {
+    font-weight: 400;
+    font-size: 1.250em;
+}
+
+md-content {
+    min-height: calc(90vh - 80px);
+    margin-top: 50px;
+
+}
+
+.rss-subscribe {
+    float: right;
+}
+
+.description {
+    text-align: center;
+}
+
+div.slideshowFrame {
+    min-height: 220px;
+    min-width: 300px;
+}
+
+img.slideshowPics {
+    max-height: 220px;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+md-tab-item.md-tab {
+    font-size: 20px;
+    line-height: 0;
+    padding: 10px;
+    height: 10px;
+}
+
+div.moreposts {
+    padding-top: 32px;
+}
+
+div.pagination {
+    text-align: center;
+}
+
+.floatfab {
+    position: absolute;
+    overflow: auto;
+}
+
+.icon {
+    text-align: justify;
+    font-size: 25;
+}
+.iconextenal{
+  margin-bottom: 2px;
+}
+
+
+
+md-backdrop.md-opaque {
+    position: fixed
+}
+
+.header-toolbal {
+    position: fixed;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    top: 0px;
+}
