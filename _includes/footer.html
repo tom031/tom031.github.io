@@ -1,10 +1,24 @@
 <footer md-whiteframe="2">
-    <h6> <a href="{{site.linkedin}}"><ng-md-icon icon="copyright" class="icon"></ng-md-icon>{{site.fullname}}. </a>
-    Hosted by <a href="https://pages.github.com/"><ng-md-icon icon="github-box" class="icon"></ng-md-icon></a> 
-    and <a href="https://azure.microsoft.com"><md-icon md-svg-src="{{site.icons_link}}azure.svg" class="icon"></md-icon></a>
-    . Powered by <a href="https://jekyllrb.com/"><md-icon md-svg-src="{{site.icons_link}}jekyll.svg" class="icon"></md-icon></a>
-     and <a href="https://angularjs.org/"><md-icon md-svg-src="{{site.icons_link}}angular.svg" class="icon"></md-icon></a>
-  </h6>
+    <h6>
+        <a href="{{site.linkedin}}">
+            <ng-md-icon icon="copyright" class="icon"></ng-md-icon>{{site.fullname}}. </a>
+        Hosted by
+        <a href="https://pages.github.com/">
+            <ng-md-icon icon="github-box" class="icon"></ng-md-icon>
+        </a>
+        and
+        <a href="https://azure.microsoft.com">
+            <md-icon md-svg-src="{{site.icons_link}}azure.svg" class="icon"></md-icon>
+        </a>
+        . Powered by
+        <a href="https://jekyllrb.com/">
+            <md-icon md-svg-src="{{site.icons_link}}jekyll.svg" class="icon"></md-icon>
+        </a>
+        and
+        <a href="https://angularjs.org/">
+            <md-icon md-svg-src="{{site.icons_link}}angular.svg" class="icon"></md-icon>
+        </a>
+    </h6>
     <md-divider></md-divider>
     <div class="row">
         <a href="{{site.github_link}}">
@@ -24,10 +38,13 @@
         </a>
         <a href="{{site.sof}}">
             <md-button aria-label="sof">
-                <md-icon md-svg-src="{{site.icons_link}}stackoverflow.svg" ></md-icon>
+                <md-icon md-svg-src="{{site.icons_link}}stackoverflow.svg"></md-icon>
             </md-button>
         </a>
-        <span class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></span>
+        <a href="{{ "/feed.xml " | prepend: site.baseurl }}">
+            <md-button aria-label="rss">
+                <md-icon md-svg-src="{{site.icons_link}}rss.svg"></md-icon>
+            </md-button>
+        </a>
     </div>
-
 </footer>
