@@ -39,7 +39,7 @@ defaults:
 
 # Build settings
 icons_link: images\icons\
-favicon: images\icons\favicon2.ico
+favicon: /favicon.ico
 markdown: kramdown
 paginate: 5
 paginate_path: /pages/page:num/
