@@ -24,7 +24,7 @@ avatar: http://s.gravatar.com/avatar/31793858d3a0ca4af25a1feb8b50a498?s=60
 #default setting for Front Matter
 defaults:
   - scope:
-     path: posts # default setting for Front Matter for all posts
+      path: posts # default setting for Front Matter for all posts
       type: posts
     values:
       layout: post
