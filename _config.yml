@@ -22,19 +22,19 @@ avatar: http://s.gravatar.com/avatar/31793858d3a0ca4af25a1feb8b50a498?s=60
 
 
 #default setting for Front Matter
-defaults:
-  - scope:
-      path: posts # default setting for Front Matter for all posts
-      type: posts
-    values:
-      layout: post
-      title: Tom Dinh's Blog
-      permalink: ""
-      published: ""
-      date : 2017-1-1
-      category: blog
-      categories: jekyll, github, pages
-      tags: code
+#defaults:
+ # - scope:
+  #    path: posts # default setting for Front Matter for all posts
+   #   type: posts
+    #values:
+     # layout: post
+      #title: Tom Dinh's Blog
+      #permalink: ""
+      #published: ""
+      #date : 2017-1-1
+      #category: blog
+      #categories: jekyll, github, pages
+      #tags: code
 
 
 # Build settings
@@ -45,7 +45,7 @@ paginate: 5
 paginate_path: /pages/page:num/
 theme: minima
 highlighter: rouge
-permalink: /posts/:title #permalink in the front matter of your blog page will cause pagination to break
+permalink: pretty #permalink in the front matter of your blog page will cause pagination to break
 version: 1.0.1
 gems:
   - jekyll-sitemap
