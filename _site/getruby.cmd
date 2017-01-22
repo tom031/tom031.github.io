@@ -7,9 +7,9 @@ SET PATH=%PATH%;D:\home\site\deployments\tools\r\ruby-2.3.1-x64-mingw32\bin
 REM I am in the repository folder
 pushd D:\home\site\deployments
 if not exist tools md tools
-cd tools
+cd tools 
 if not exist r md r
-cd r
+cd r 
 if exist ruby-2.3.1-x64-mingw32 goto end
 
 echo No Ruby, need to get it!
@@ -22,7 +22,7 @@ echo START Unzipping Ruby
 SetLocal DisableDelayedExpansion & d:\7zip\7za x -xr!*.ri -y ruby231.zip > rubyout
 echo DONE Unzipping Ruby
 
-REM Get DevKit to build Ruby native gems
+REM Get DevKit to build Ruby native gems  
 REM If you don't need DevKit, rem this out.
 curl -o DevKit.zip http://cdn.rubyinstaller.org/archives/devkits/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe
 echo START Unzipping DevKit

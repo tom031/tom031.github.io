@@ -30,7 +30,7 @@ defaults:
       layout: post
       title: Tom Dinh's Blog
       permalink: ""
-      published: false
+      published: ""
       date : 2017-1-1
       category: blog
       categories: jekyll, github, pages
