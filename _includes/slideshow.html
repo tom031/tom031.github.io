@@ -1,4 +1,4 @@
-<md-tabs tabs-autoplay="3000" md-align-tabs="bottom" md-center-tabs=true md-autoselect=true md-dynamic-height=false>
+<md-tabs class='slideshow' tabs-autoplay="3000" md-align-tabs="bottom" md-center-tabs=true md-autoselect=true md-dynamic-height=false>
   {% for image in site.static_files %}
       {% if image.path contains 'pictures/slideshowPics/' %}
         <md-tab md-no-select-click=true>
