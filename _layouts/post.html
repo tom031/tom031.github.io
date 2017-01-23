@@ -2,7 +2,7 @@
 layout: default
 author: Tom Dinh
 ---
-
+<div class="posttext">
 <md-card>
   <h3>{{page.title}}</h3>
   <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }} • {{ page.author }} • <a href="https://tom031.github.io{{ post.url }}#disqus_thread">0 Comments</a></span>
@@ -15,3 +15,4 @@ author: Tom Dinh
 {% if jekyll.environment == 'production' %}
 {% include disqus.html %}
 {% endif %}
+</div>

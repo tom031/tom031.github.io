@@ -47,6 +47,7 @@ theme: minima
 highlighter: rouge
 permalink: pretty #permalink in the front matter of your blog page will cause pagination to break
 version: 1.0.1
+encoding: utf-8
 gems:
   - jekyll-sitemap
   - jemoji

@@ -76,3 +76,16 @@ md-backdrop.md-opaque {
     margin-bottom: 0px;
     top: 0px;
 }
+img{    
+    max-height: 110px;
+    max-width: 110px;
+    display: block;
+    }
+
+    div.posttext{        
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 5%;
+
+    }
+    
