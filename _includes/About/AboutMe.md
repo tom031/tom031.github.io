@@ -1,5 +1,5 @@
 <h3> Hi ! <br/> My name is Tom Dinh.</h3>
-<p> Actually I got two names: <a href="https://en.wikipedia.org/wiki/%C4%90inh_dynasty">Đinh</a> Mạnh Hoàng is my Viet paper
+<p> Actually I got two names: <a class="hiddenlink" href="https://en.wikipedia.org/wiki/%C4%90inh_dynasty">Đinh</a> Mạnh Hoàng is my Viet paper
     name legally. but people call me Tom, in Vietnamese writing is <b> Tôm </b>, it means a <i>lobster/shrimp/prawn</i>,
     it not short for Thomas like in English. In Thai, it means boiling process.</p>
 {% for image in site.static_files %} {% if image.path contains 'pictures/postPics/About/lobster.jpg' %}
