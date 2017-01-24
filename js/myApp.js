@@ -3,6 +3,9 @@ app.controller('appCtrl', function($scope, $mdSidenav, $log, $mdMedia) {
     this.isOpen = false;
     this.hover = false;
     var isOpenRight;
+    var domainname;
+    domainname = document.domain;
+    console.log(domainname);
     $scope.buttonSidenav = $scope.$watch(
         function() {
             return $mdMedia('gt-md');
