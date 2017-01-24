@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 
-   gem 'github-pages', '~> 116'
+   gem 'github-pages', '~> 117'
    gem 'jemoji'
    gem 'jekyll-sitemap'
    gem 'jekyll-feed'
    gem 'jekyll-mentions'
    gem 'jekyll-paginate'
-   gem 'github-pages-health-check', '~> 1.3'
+   gem 'github-pages-health-check'
  
 
 
