@@ -17,5 +17,8 @@ permalink: /About/
                 {% include About/AboutPage.md %}
             </md-tab-body>
         </md-tab>
-    </md-tabs>
+    </md-tabs>   
+{% if jekyll.environment == 'production' %}
+{% include disqus.html %}
+{% endif %}
 </md-content>
