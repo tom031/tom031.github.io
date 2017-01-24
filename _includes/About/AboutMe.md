@@ -28,3 +28,6 @@
 <p>From 2008 to 2015 at university, I learned VB; C#; Java; Javascript, HTML/CSS to develop some study projects using VB.Net
     Forms and PHP solutions such as Joomla, Wordpress. OpenCart and Prestashop. I sometimes use Eclipse for PHP project but
     Visual Studio is my best friend IDE since the VB.NET time, until today when I work with ASP.NET MVC and AngularJS.</p>
+    {% if jekyll.environment == 'production' %}
+{% include disqus.html %}
+{% endif %}

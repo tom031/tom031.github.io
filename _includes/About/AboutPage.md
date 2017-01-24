@@ -17,3 +17,6 @@ Whoa! This is extracted what I need. So, I make my hand dirty with <a href="http
 {% for image in site.static_files %} {% if image.path contains 'pictures/postPics/About/whoa.jpg' %}
 <img src="{{ site.baseurl }}{{ image.path }}" alt="Whooooaa!" /> {% endif %} {% endfor %}
 <h3><a href='http://odetocode.com/' target='_blank'>Voilà</a>. Today, I proud to say I am a developer, I develop this pages. It's my playground as well as a blog to share with my technical issues and solutions I found.</h3>
+{% if jekyll.environment == 'production' %}
+{% include disqus.html %}
+{% endif %}
