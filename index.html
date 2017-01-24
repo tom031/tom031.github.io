@@ -8,7 +8,14 @@ layout: default
   </div>
   <md-divider></md-divider>
   <div flex="auto" flex-xs="100" md-whiteframe="1">
-    <h3>this place for my awesome recent works</h3>
+    <h3>Magical things coming soon here</h3>
+    {% if site.url == "github.io" %}
+   github
+{% elsif site.url == "azure"  %}
+   other thing
+{% endif %}
+{{ site.url }} <br/>
+{{ site.host }}
   </div>
 </div>
 <md-divider ></md-divider>
