@@ -1,4 +1,5 @@
 var app = angular.module('app', ['ngMaterial', 'ngAnimate', 'ngMdIcons']);
+
 //TODO: Get Json File
 app.factory('getData', function ($http) {
     return {
@@ -11,7 +12,9 @@ app.factory('getData', function ($http) {
         }
     }
 });
+
 app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData) {
+
     //TODO: hosting link changing
     $scope.domainname = null;
     var hosting = document.domain;    
@@ -25,23 +28,7 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
         return $scope.domainname = 'aws';
     }
     else ($scope.domainname = 'localhost');
-
-    //test hosting
-    //--
-  //  $scope.domainname1 = null;
-  //  var hosting1 = 'tom031.github.io';
-  //  if (hosting1.match(/github/gi)) {
-  //      return $scope.domainname1 = 'github';
-  //  }
-  //  else if (hosting1.match(/azurewebsites/gi)) {
- //       return $scope.domainname1 = 'azure';
-  //  }
-  //  else if (hosting1.match(/aws|amazon/gi)) {
-  //      return $scope.domainname1 = 'aws';
-  //  }
-  //  else ($scope.domainname1 = 'github');
-//--
-
+   
     //TODO: sideNav controlling
     this.isOpen = false;
     this.hover = false;
@@ -78,6 +65,8 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
         defer.reject('could not find someFile.json');
     };
 });
+
+//TODO run the slide show
 app.directive('tabsAutoplay', function ($interval) {
     return {
         restrict: 'A,E',
