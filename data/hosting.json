@@ -1,0 +1,24 @@
+{
+    "hostProviders": [
+        {
+            "provider": "GitHub",
+            "hostlink": "tom031.github.io",
+            "fulllink": "https://tom031.github.io"
+        },
+        {
+            "provider": "Azure",
+            "hostlink": "tom031.azurewebsites.net",
+            "fulllink": "http://tom031.azurewebsites.net"
+        },
+        {
+            "provider": "AWS",
+            "hostlink": "tom031.s3-website-us-west-2.amazonaws.com/",
+            "fulllink": "http://tom031.s3-website-us-west-2.amazonaws.com/"
+        },
+        {
+            "provider": "dev",
+            "hostlink": "127.0.0.0",
+            "fulllink": "http://localhost:4000/"
+        }
+    ]
+}

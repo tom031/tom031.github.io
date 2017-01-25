@@ -49,10 +49,14 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
             <!--this is body render-->
             <md-content md-whiteframe="14">
                 <md-card class="posttext">
-                    <md-divider ></md-divider>
+                    <md-divider></md-divider>
 <div layout="row" layout-xs="column">
   <div flex="66" flex-xs="100" layout-fill class="slideshowFrame">
     <md-tabs class='slideshow' tabs-autoplay="3000" md-align-tabs="bottom" md-center-tabs=true md-autoselect=true md-dynamic-height=false>
+  
+      
+  
+      
   
       
   
@@ -210,61 +214,76 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
   </div>
   <md-divider></md-divider>
   <div flex="auto" flex-xs="100" md-whiteframe="1">
+    <p ng-bind='domainname'></p>
+    <p> This page also hosting on: </p>
+    <div ng-if="domainname === 'localhost'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href=https://tom031.github.io ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[1].provider"></div>
+      <a href=http://tom031.azurewebsites.net ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>
+      <div ng-bind="hostData[2].provider"></div>
+      <a href=http://tom031.s3-website-us-west-2.amazonaws.com/ ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
+    </div>
+    <div ng-if="domainname === 'azure'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href=https://tom031.github.io ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[2].provider"></div>
+      <a href=http://tom031.s3-website-us-west-2.amazonaws.com/ ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
+    </div>
+    <div ng-if="domainname === 'aws'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href=https://tom031.github.io ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[1].provider"></div>
+      <a href=http://tom031.azurewebsites.net ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>      
+    </div>
     <h3>Magical things coming soon here</h3>
-    
-http://localhost:4000 <br/>
-127.0.0.1 <br/>
-
-
-
   </div>
 </div>
-<md-divider ></md-divider>
+<md-divider></md-divider>
 <!--This is posts render-->
 <md-content md-whiteframe="1">
-    <md-card>
-        My blog
-      <md-card-content>
+  <md-card>
+    My blog
+    <md-card-content>
       <div class="home">
         <ul class="post-list">
           
-            <li>
-              <span class="post-meta">Nov 22, 2016 • Tom Dinh • <a href="https://tom031.github.io/2016/11/22/welcome-to-Tom's-blog/#disqus_thread">0 Comments</a></span>
-              <h2>
-                <a class="post-link" href="/2016/11/22/welcome-to-Tom's-blog/">Coming soon</a>
-              </h2>
-              <p>
-                <p>Coming soon</p>
+          <li>
+            <span class="post-meta">Nov 22, 2016 • Tom Dinh • <a href="https://tom031.github.io/2016/11/22/welcome-to-Tom's-blog/#disqus_thread">0 Comments</a></span>
+            <h2>
+              <a class="post-link" href="/2016/11/22/welcome-to-Tom's-blog/">Coming soon</a>
+            </h2>
+            <p>
+              <p>Coming soon</p>
 
-              </p>
-              <md-card-actions layout ="row" layout-align="end center">
-                  <a href="/2016/11/22/welcome-to-Tom's-blog/">see more ...</a>
-              </md-card-actions>
-              <md-divider ></md-divider>
-            </li>
+            </p>
+            <md-card-actions layout="row" layout-align="end center">
+              <a href="/2016/11/22/welcome-to-Tom's-blog/">see more ...</a>
+            </md-card-actions>
+            <md-divider></md-divider>
+          </li>
           
-            <li>
-              <span class="post-meta">Nov 18, 2016 • Tom Dinh • <a href="https://tom031.github.io/2016/11/18/why-you-need-to-start-blogging/#disqus_thread">0 Comments</a></span>
-              <h2>
-                <a class="post-link" href="/2016/11/18/why-you-need-to-start-blogging/">First post</a>
-              </h2>
-              <p>
-                <p>“I would advise folks in software to do one thing, and that’s write. Learn how to write…It’s actually useful. You need to know how to express yourself. And it’s really tough for a lot of engineers to step up and do public speaking.”</p>...
-              </p>
-              <md-card-actions layout ="row" layout-align="end center">
-                  <a href="/2016/11/18/why-you-need-to-start-blogging/">see more ...</a>
-              </md-card-actions>
-              <md-divider ></md-divider>
-            </li>
+          <li>
+            <span class="post-meta">Nov 18, 2016 • Tom Dinh • <a href="https://tom031.github.io/2016/11/18/why-you-need-to-start-blogging/#disqus_thread">0 Comments</a></span>
+            <h2>
+              <a class="post-link" href="/2016/11/18/why-you-need-to-start-blogging/">First post</a>
+            </h2>
+            <p>
+              <p>“I would advise folks in software to do one thing, and that’s write. Learn how to write…It’s actually useful. You need to know how to express yourself. And it’s really tough for a lot of engineers to step up and do public speaking.”</p>...
+            </p>
+            <md-card-actions layout="row" layout-align="end center">
+              <a href="/2016/11/18/why-you-need-to-start-blogging/">see more ...</a>
+            </md-card-actions>
+            <md-divider></md-divider>
+          </li>
           
         </ul>
-        </md-card-content>
-    </md-card>
+    </md-card-content>
+  </md-card>
 </md-content>
-  
+
 
 </div>
-
                 </md-card>
             </md-content>
 
