@@ -7,30 +7,8 @@ layout: default
     {% include slideshow.html %}
   </div>
   <md-divider></md-divider>
-  <div flex="auto" flex-xs="100" md-whiteframe="1">
-    <p ng-bind='domainname'></p>
-    <p> This page also hosting on: </p>
-    <div ng-if="domainname === 'localhost'">
-      <div ng-bind="hostData[0].provider"></div>
-      <a href={{ site.data.hosting.hostProviders[0].fulllink }} ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData[1].provider"></div>
-      <a href={{ site.data.hosting.hostProviders[1].fulllink }} ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>
-      <div ng-bind="hostData[2].provider"></div>
-      <a href={{ site.data.hosting.hostProviders[2].fulllink }} ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
-    </div>
-    <div ng-if="domainname === 'azure'">
-      <div ng-bind="hostData[0].provider"></div>
-      <a href={{ site.data.hosting.hostProviders[0].fulllink }} ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData[2].provider"></div>
-      <a href={{ site.data.hosting.hostProviders[2].fulllink }} ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
-    </div>
-    <div ng-if="domainname === 'aws'">
-      <div ng-bind="hostData[0].provider"></div>
-      <a href={{ site.data.hosting.hostProviders[0].fulllink }} ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData[1].provider"></div>
-      <a href={{ site.data.hosting.hostProviders[1].fulllink }} ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>      
-    </div>
-    <h3>Magical things coming soon here</h3>
+  <div flex="auto" flex-xs="100" md-whiteframe="1">   
+    <h3>Magical things heppen in here!</h3>
   </div>
 </div>
 <md-divider></md-divider>

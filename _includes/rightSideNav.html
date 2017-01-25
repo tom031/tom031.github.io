@@ -1,18 +1,23 @@
-﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')" >
-    <md-list>
-      <a href="/About/"><md-list-item class="md-3-line" ng-click="null">
-        <h3>About</h3>
-      </md-list-item></a>
-      <md-divider ></md-divider>
-      <md-list-item class="md-3-line" ng-click="null">
-          <h3>Blog link address</h3>
-      </md-list-item>
-      <md-divider ></md-divider>
-      <md-list-item class="md-3-line" ng-click="null">
-          <h3> Contact page</h3>
-      </md-list-item>
-      <md-divider ></md-divider>
-    </md-list >
+﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')">
+    <md-list flex>
+        <a href="/About/">
+            <md-list-item class="md-3-line" ng-click="null">
+                <h3>About</h3>
+            </md-list-item>
+        </a>
+        <md-divider></md-divider>        
+        <md-list-item class="md-3-line" ng-click="null">
+            <h3>Contact</h3>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-itemclass="md-2-line">
+            <div>
+                <!--Render hosting.html-->            
+            {% include hostingLinks.html %}
+            </div>
+        </md-list-item>
+        <md-divider></md-divider>
+    </md-list>
     <span flex></span>
     <h4 class="description" style=" float: right">{{site.description}}</h4>
 </md-sidenav>

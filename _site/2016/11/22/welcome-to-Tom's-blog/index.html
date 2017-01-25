@@ -136,25 +136,57 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
         </div>
 
         <!--this is Side nav render-->
-        ﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')" >
-    <md-list>
-      <a href="/About/"><md-list-item class="md-3-line" ng-click="null">
-        <h3>About</h3>
-      </md-list-item></a>
-      <md-divider ></md-divider>
-      <md-list-item class="md-3-line" ng-click="null">
-          <h3>Blog link address</h3>
-      </md-list-item>
-      <md-divider ></md-divider>
-      <md-list-item class="md-3-line" ng-click="null">
-          <h3> Contact page</h3>
-      </md-list-item>
-      <md-divider ></md-divider>
-    </md-list >
+        ﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')">
+    <md-list flex>
+        <a href="/About/">
+            <md-list-item class="md-3-line" ng-click="null">
+                <h3>About</h3>
+            </md-list-item>
+        </a>
+        <md-divider></md-divider>        
+        <md-list-item class="md-3-line" ng-click="null">
+            <h3>Contact</h3>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-itemclass="md-2-line">
+            <div>
+                <!--Render hosting.html-->            
+            <!--Include in rightSideNav.html -->
+<!--Make it loop and consume hosting.json -->
+<h3> This page also hosting on: </h3>
+    <div ng-if="domainname == 'localhost'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href=https://tom031.github.io ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[1].provider"></div>
+      <a href=http://tom031.azurewebsites.net ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>
+      <div ng-bind="hostData[2].provider"></div>
+      <a href=http://tom031.s3-website-us-west-2.amazonaws.com/ ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
+    </div>
+    <div ng-if="domainname == 'azure'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href=https://tom031.github.io ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[2].provider"></div>
+      <a href=http://tom031.s3-website-us-west-2.amazonaws.com/ ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
+    </div>
+    <div ng-if="domainname == 'aws'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href=https://tom031.github.io ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[1].provider"></div>
+      <a href=http://tom031.azurewebsites.net ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>      
+    </div>
+    <div ng-if="domainname == 'github'">
+      <span ng-bind="hostData[2].provider"></span>
+      <a href=http://tom031.s3-website-us-west-2.amazonaws.com/ ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'>a</a>
+      <div ng-bind="hostData[1].provider"></div>
+      <a href=http://tom031.azurewebsites.net ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'>a</a>      
+    </div>
+            </div>
+        </md-list-item>
+        <md-divider></md-divider>
+    </md-list>
     <span flex></span>
     <h4 class="description" style=" float: right">I want to build my own blog, so this is it.</h4>
 </md-sidenav>
-
     </div>
     <!--this is JS files render-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>

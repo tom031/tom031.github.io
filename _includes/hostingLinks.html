@@ -1,0 +1,29 @@
+<!--Include in rightSideNav.html -->
+<!--Make it loop and consume hosting.json -->
+<h3> This page also hosting on: </h3>
+    <div ng-if="domainname == 'localhost'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href={{ site.data.hosting.hostProviders[0].fulllink }} ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[1].provider"></div>
+      <a href={{ site.data.hosting.hostProviders[1].fulllink }} ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>
+      <div ng-bind="hostData[2].provider"></div>
+      <a href={{ site.data.hosting.hostProviders[2].fulllink }} ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
+    </div>
+    <div ng-if="domainname == 'azure'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href={{ site.data.hosting.hostProviders[0].fulllink }} ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[2].provider"></div>
+      <a href={{ site.data.hosting.hostProviders[2].fulllink }} ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
+    </div>
+    <div ng-if="domainname == 'aws'">
+      <div ng-bind="hostData[0].provider"></div>
+      <a href={{ site.data.hosting.hostProviders[0].fulllink }} ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData[1].provider"></div>
+      <a href={{ site.data.hosting.hostProviders[1].fulllink }} ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>      
+    </div>
+    <div ng-if="domainname == 'github'">
+      <span ng-bind="hostData[2].provider"></span>
+      <a href={{ site.data.hosting.hostProviders[2].fulllink }} ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'>a</a>
+      <div ng-bind="hostData[1].provider"></div>
+      <a href={{ site.data.hosting.hostProviders[1].fulllink }} ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'>a</a>      
+    </div>
