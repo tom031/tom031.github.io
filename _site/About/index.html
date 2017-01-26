@@ -132,15 +132,15 @@ Whoa! This is extracted what I need. So, I make my hand dirty with <a href="http
         </a>
         and
         <a href="https://azure.microsoft.com" target='_blank'>
-            <md-icon md-svg-src="" class="icon"></md-icon>
+            <md-icon md-svg-src="/images/icons/azure.svg" class="icon"></md-icon>
         </a>
         . Powered by
         <a href="https://jekyllrb.com/" target='_blank'>
-            <md-icon md-svg-src="" class="icon"></md-icon>
+            <md-icon md-svg-src="/images/icons/jekyll.svg" class="icon"></md-icon>
         </a>
         and
         <a href="https://angularjs.org/" target='_blank'>
-            <md-icon md-svg-src="" class="icon"></md-icon>
+            <md-icon md-svg-src="/images/icons/angular.svg" class="icon"></md-icon>
         </a>
     </h6>
     <md-divider></md-divider>
@@ -162,12 +162,12 @@ Whoa! This is extracted what I need. So, I make my hand dirty with <a href="http
         </a>
         <a href="https://stackoverflow.com/users/6716449/tom031" target='_blank'>
             <md-button aria-label="sof">
-                <md-icon md-svg-src=""></md-icon>
+                <md-icon md-svg-src="/images/icons/stackoverflow.svg"></md-icon>
             </md-button>
         </a>
         <a href="/feed.xml">
             <md-button aria-label="rss">
-                <md-icon md-svg-src=""></md-icon>
+                <md-icon md-svg-src="/images/icons/rss.svg"></md-icon>
             </md-button>
         </a>
     </div>
@@ -195,30 +195,30 @@ Whoa! This is extracted what I need. So, I make my hand dirty with <a href="http
 <!--Make it loop and consume hosting.json -->
 <h3> This page also hosting on: </h3>
     <div ng-show="domainname == 'localhost'" ng-hide="domainname !='localhost'">
-      <div ng-bind="hostData[0].provider"></div>
-      <a href="" ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData[1].provider"></div>
-      <a href="" ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>
-      <div ng-bind="hostData[2].provider"></div>
-      <a href="" ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
+      <div ng-bind="hostData.hostProviders[0].provider"></div>
+      <a href="https://tom031.github.io" ng-bind="hostData.hostProviders[0].hostlink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData.hostProviders[1].provider"></div>
+      <a href="http://tom031.azurewebsites.net" ng-bind="hostData.hostProviders[1].hostlink" target="_blank" alt='Azure'></a>
+      <div ng-bind="hostData.hostProviders[2].provider"></div>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" ng-bind="hostData.hostProviders[2].hostlink" target="_blank" alt='AWS'></a>
     </div>
     <div ng-show="domainname == 'azure'" ng-hide="domainname !='azure'">
-      <div ng-bind="hostData[0].provider"></div>
-      <a href="" ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData[2].provider"></div>
-      <a href="" ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'></a>
+      <div ng-bind="hostData.hostProviders[0].provider"></div>
+      <a href="https://tom031.github.io" ng-bind="hostData.hostProviders[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData.hostProviders[2].provider"></div>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" ng-bind="hostData.hostProviders[2].fulllink" target="_blank" alt='AWS'></a>
     </div>
     <div ng-show="domainname == 'aws'" ng-hide="domainname !='aws'">
-      <div ng-bind="hostData[0].provider"></div>
-      <a href="" ng-bind="hostData[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData[1].provider"></div>
-      <a href="" ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'></a>      
+      <div ng-bind="hostData.hostProviders[0].provider"></div>
+      <a href="https://tom031.github.io" ng-bind="hostData.hostProviders[0].fulllink" target="_blank" alt='GitHub'></a>
+      <div ng-bind="hostData.hostProviders[1].provider"></div>
+      <a href="http://tom031.azurewebsites.net" ng-bind="hostData.hostProviders[1].fulllink" target="_blank" alt='Azure'></a>      
     </div>
     <div ng-show="domainname == 'github'" ng-hide="domainname !='github'">
-      <span ng-bind="hostData[2].provider"></span>
-      <a href="" ng-bind="hostData[2].fulllink" target="_blank" alt='AWS'>a</a>
-      <div ng-bind="hostData[1].provider"></div>
-      <a href="" ng-bind="hostData[1].fulllink" target="_blank" alt='Azure'>a</a>      
+      <span ng-bind="hostData.hostProviders[2].provider"></span>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" ng-bind="hostData.hostProviders[2].fulllink" target="_blank" alt='AWS'>a</a>
+      <div ng-bind="hostData.hostProviders[1].provider"></div>
+      <a href="http://tom031.azurewebsites.net" ng-bind="hostData.hostProviders[1].fulllink" target="_blank" alt='Azure'>a</a>      
     </div>
             </div>
         </md-list-item>

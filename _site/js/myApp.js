@@ -57,12 +57,13 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
     };
 
     //TODO: Read Json data
-    var hostDataUrl = '/data/hosting.json';
+    var hostDataUrl = '/jsonfiles/hosting.json';
     getData.get(hostDataUrl).then(function successCallback(response) {
-        $scope.hostData = response.data.hostProviders;
-        //console.log(response.data.hostProviders[0]);
+        $scope.hostData = response.data;
+        console.log(response.data.hostProviders[0]);
     }), function (response) {
         defer.reject('could not find someFile.json');
+        console.log(response.data);
     };
 });
 
