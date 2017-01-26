@@ -17,7 +17,8 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
 
     //TODO: hosting link changing
     $scope.domainname = null;
-    var hosting = document.domain;    
+    var hosting = document.domain;
+    console.log(hosting);    
     if (hosting.match(/github/gi)) {
         return $scope.domainname = 'github';
     }

@@ -2,28 +2,28 @@
 <!--Make it loop and consume hosting.json -->
 <h3> This page also hosting on: </h3>
     <div ng-show="domainname == 'localhost'" ng-hide="domainname !='localhost'">
-      <div ng-bind="hostData.hostProviders[0].provider"></div>
-      <a href="{{ site.data.hosting.hostProviders[0].fulllink }}" ng-bind="hostData.hostProviders[0].hostlink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData.hostProviders[1].provider"></div>
-      <a href="{{ site.data.hosting.hostProviders[1].fulllink }}" ng-bind="hostData.hostProviders[1].hostlink" target="_blank" alt='Azure'></a>
-      <div ng-bind="hostData.hostProviders[2].provider"></div>
-      <a href="{{ site.data.hosting.hostProviders[2].fulllink }}" ng-bind="hostData.hostProviders[2].hostlink" target="_blank" alt='AWS'></a>
+      <div>{{ site.data.hosting.hostProviders[0].provider }}</div>
+      <a href="{{ site.data.hosting.hostProviders[0].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[0].hostlink }}</a>
+      <div>{{ site.data.hosting.hostProviders[1].provider }}</div>
+      <a href="{{ site.data.hosting.hostProviders[1].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[1].hostlink }}</a>
+      <div>{{site.data.hosting.hostProviders[2].provider}}</div>
+      <a href="{{ site.data.hosting.hostProviders[2].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[2].hostlink }}</a>
     </div>
     <div ng-show="domainname == 'azure'" ng-hide="domainname !='azure'">
-      <div ng-bind="hostData.hostProviders[0].provider"></div>
-      <a href="{{ site.data.hosting.hostProviders[0].fulllink }}" ng-bind="hostData.hostProviders[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData.hostProviders[2].provider"></div>
-      <a href="{{ site.data.hosting.hostProviders[2].fulllink }}" ng-bind="hostData.hostProviders[2].fulllink" target="_blank" alt='AWS'></a>
+       <div>{{ site.data.hosting.hostProviders[0].provider }}</div>
+      <a href="{{ site.data.hosting.hostProviders[0].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[0].hostlink }}</a>
+      <div>{{site.data.hosting.hostProviders[2].provider}}</div>
+      <a href="{{ site.data.hosting.hostProviders[2].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[2].hostlink }}</a>
     </div>
     <div ng-show="domainname == 'aws'" ng-hide="domainname !='aws'">
-      <div ng-bind="hostData.hostProviders[0].provider"></div>
-      <a href="{{ site.data.hosting.hostProviders[0].fulllink }}" ng-bind="hostData.hostProviders[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData.hostProviders[1].provider"></div>
-      <a href="{{ site.data.hosting.hostProviders[1].fulllink }}" ng-bind="hostData.hostProviders[1].fulllink" target="_blank" alt='Azure'></a>      
+      <div>{{ site.data.hosting.hostProviders[0].provider }}</div>
+      <a href="{{ site.data.hosting.hostProviders[0].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[0].hostlink }}</a>
+      <div>{{ site.data.hosting.hostProviders[1].provider }}</div>
+      <a href="{{ site.data.hosting.hostProviders[1].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[1].hostlink }}</a>
     </div>
     <div ng-show="domainname == 'github'" ng-hide="domainname !='github'">
-      <span ng-bind="hostData.hostProviders[2].provider"></span>
-      <a href="{{ site.data.hosting.hostProviders[2].fulllink }}" ng-bind="hostData.hostProviders[2].fulllink" target="_blank" alt='AWS'>a</a>
-      <div ng-bind="hostData.hostProviders[1].provider"></div>
-      <a href="{{ site.data.hosting.hostProviders[1].fulllink }}" ng-bind="hostData.hostProviders[1].fulllink" target="_blank" alt='Azure'>a</a>      
+      <div>{{ site.data.hosting.hostProviders[1].provider }}</div>
+      <a href="{{ site.data.hosting.hostProviders[1].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[1].hostlink }}</a>
+      <div>{{site.data.hosting.hostProviders[2].provider}}</div>
+      <a href="{{ site.data.hosting.hostProviders[2].fulllink }}" target="_blank">{{ site.data.hosting.hostProviders[2].hostlink }}</a>      
     </div>

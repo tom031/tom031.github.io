@@ -160,30 +160,30 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
 <!--Make it loop and consume hosting.json -->
 <h3> This page also hosting on: </h3>
     <div ng-show="domainname == 'localhost'" ng-hide="domainname !='localhost'">
-      <div ng-bind="hostData.hostProviders[0].provider"></div>
-      <a href="https://tom031.github.io" ng-bind="hostData.hostProviders[0].hostlink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData.hostProviders[1].provider"></div>
-      <a href="http://tom031.azurewebsites.net" ng-bind="hostData.hostProviders[1].hostlink" target="_blank" alt='Azure'></a>
-      <div ng-bind="hostData.hostProviders[2].provider"></div>
-      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" ng-bind="hostData.hostProviders[2].hostlink" target="_blank" alt='AWS'></a>
+      <div>GitHub</div>
+      <a href="https://tom031.github.io" target="_blank">tom031.github.io</a>
+      <div>Azure</div>
+      <a href="http://tom031.azurewebsites.net" target="_blank">tom031.azurewebsites.net</a>
+      <div>AWS</div>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" target="_blank">tom031.s3-website-us-west-2.amazonaws.com/</a>
     </div>
     <div ng-show="domainname == 'azure'" ng-hide="domainname !='azure'">
-      <div ng-bind="hostData.hostProviders[0].provider"></div>
-      <a href="https://tom031.github.io" ng-bind="hostData.hostProviders[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData.hostProviders[2].provider"></div>
-      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" ng-bind="hostData.hostProviders[2].fulllink" target="_blank" alt='AWS'></a>
+       <div>GitHub</div>
+      <a href="https://tom031.github.io" target="_blank">tom031.github.io</a>
+      <div>AWS</div>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" target="_blank">tom031.s3-website-us-west-2.amazonaws.com/</a>
     </div>
     <div ng-show="domainname == 'aws'" ng-hide="domainname !='aws'">
-      <div ng-bind="hostData.hostProviders[0].provider"></div>
-      <a href="https://tom031.github.io" ng-bind="hostData.hostProviders[0].fulllink" target="_blank" alt='GitHub'></a>
-      <div ng-bind="hostData.hostProviders[1].provider"></div>
-      <a href="http://tom031.azurewebsites.net" ng-bind="hostData.hostProviders[1].fulllink" target="_blank" alt='Azure'></a>      
+      <div>GitHub</div>
+      <a href="https://tom031.github.io" target="_blank">tom031.github.io</a>
+      <div>Azure</div>
+      <a href="http://tom031.azurewebsites.net" target="_blank">tom031.azurewebsites.net</a>
     </div>
     <div ng-show="domainname == 'github'" ng-hide="domainname !='github'">
-      <span ng-bind="hostData.hostProviders[2].provider"></span>
-      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" ng-bind="hostData.hostProviders[2].fulllink" target="_blank" alt='AWS'>a</a>
-      <div ng-bind="hostData.hostProviders[1].provider"></div>
-      <a href="http://tom031.azurewebsites.net" ng-bind="hostData.hostProviders[1].fulllink" target="_blank" alt='Azure'>a</a>      
+      <div>Azure</div>
+      <a href="http://tom031.azurewebsites.net" target="_blank">tom031.azurewebsites.net</a>
+      <div>AWS</div>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" target="_blank">tom031.s3-website-us-west-2.amazonaws.com/</a>      
     </div>
             </div>
         </md-list-item>
