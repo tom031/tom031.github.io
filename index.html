@@ -9,18 +9,7 @@ layout: default
   <md-divider></md-divider>
   <div flex="auto" flex-xs="100" md-whiteframe="1">   
     <h3>Magical things heppen in here!</h3>
-    {{site.time}}
-    {{site.data.name}}
-    <ul>
-{% for member in site.data.name %}
-  <li>
-    <a href="https://github.com/{{ member.github }}">
-      {{ member.name }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
-    
+    {{site.time}}  
   </div>
 </div>
 <md-divider></md-divider>

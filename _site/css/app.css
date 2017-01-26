@@ -6,13 +6,28 @@ html, body {
 }
 
 md-sidenav-right {
-    height: 100%;    
+    height: 100%;
 }
-.top-float{
+
+.top-float {
     position: fixed;
     padding-bottom: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 1%;
     top: 0px;
+    margin-top: 3%;
+}
+
+.middle-float {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    min-width: 100%;
+    vertical-align: middle
+}
+
+.float-footer {
+    position: fixed;
+    margin-top: 0px;
 }
 
 md-toobar.md-toolbar-tools {
@@ -31,6 +46,9 @@ md-content {
 
 .description {
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
 }
 
 div.slideshowFrame {

@@ -19,7 +19,7 @@
             </md-content>
 
             <!--this is footer render-->
-            <md-card flex>
+            <md-card>
                 {% include footer.html %}
             </md-card>
         </div>
@@ -27,13 +27,12 @@
         <!--this is Side nav render-->
         {%include rightSideNav.html %}
     </div>
-    <!--this is JS files render-->
-    {% include jsLib.html %}
-
     <!--this is googleAnalytics-->
     {% if site.environment == 'production' %} 
     {% include googleAnalytics.html %} 
     {% endif %}
+    <!--this is JS files render-->
+    {% include jsLib.html %}
 </body>
 
 </html>

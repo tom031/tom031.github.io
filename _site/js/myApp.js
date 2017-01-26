@@ -31,13 +31,20 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
     else ($scope.domainname = 'localhost');
 
     //TODO: sideNav controlling
+    //screen size variable
+    $scope.screenSize = $scope.$watch(function () {
+        return $mdMedia('(min-width: 1610px)');
+    }, function (trueOrfalse) {
+        return $scope.screenSize = trueOrfalse;
+    })
+
     this.isOpen = false;
     this.hover = false;
     var isOpenRight;
 
     $scope.buttonSidenav = $scope.$watch(
         function () {
-            return $mdMedia('gt-md');
+            return $scope.screenSize;
         },
         function (openOrNot) {
             $scope.buttonSidenav = openOrNot;
@@ -57,8 +64,6 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
     };
 
     //TODO: Read Json data
-
-
     var init = function () {
         var hostDataUrl = '/jsonfiles/hosting.json';
         getData.get(hostDataUrl).then(function successCallback(response) {
