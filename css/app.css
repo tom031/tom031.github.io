@@ -6,7 +6,13 @@ html, body {
 }
 
 md-sidenav-right {
-    height: 100%;
+    height: 100%;    
+}
+.top-float{
+    position: fixed;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    top: 0px;
 }
 
 md-toobar.md-toolbar-tools {
@@ -70,7 +76,7 @@ md-backdrop.md-opaque {
     position: fixed;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    top: 0px;
+    top: 0%;
 }
 
 img {
@@ -84,13 +90,15 @@ div.posttext {
     margin-right: 8%;
     margin-bottom: 5%;
 }
-a.hiddenlink:link{
-color: #000000;
-color: inherit;
-text-decoration: none;
+
+a.hiddenlink:link {
+    color: #000000;
+    color: inherit;
+    text-decoration: none;
 }
-a.hiddenlink:visited{
-color: #000000;
-color: inherit;
-text-decoration: none;
+
+a.hiddenlink:visited {
+    color: #000000;
+    color: inherit;
+    text-decoration: none;
 }

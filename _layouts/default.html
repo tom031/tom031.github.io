@@ -28,7 +28,12 @@
         {%include rightSideNav.html %}
     </div>
     <!--this is JS files render-->
-    {% include jsLib.html %} {% if jekyll.environment == 'production' %} {% include googleAnalytics.html %} {% endif %}
+    {% include jsLib.html %}
+
+    <!--this is googleAnalytics-->
+    {% if site.environment == 'production' %} 
+    {% include googleAnalytics.html %} 
+    {% endif %}
 </body>
 
 </html>

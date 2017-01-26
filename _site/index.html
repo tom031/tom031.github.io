@@ -213,7 +213,7 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
   <md-divider></md-divider>
   <div flex="auto" flex-xs="100" md-whiteframe="1">   
     <h3>Magical things heppen in here!</h3>
-    2017-01-26 15:20:12 +1300
+    2017-01-26 17:36:59 +1300
     
     <ul>
 
@@ -231,7 +231,7 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
         <ul class="post-list">
           
           <li>
-            <span class="post-meta">Nov 22, 2016 • Tom Dinh • <a href="https://tom031.github.io/2016/11/22/welcome-to-Tom's-blog/#disqus_thread">0 Comments</a></span>
+            <span class="post-meta">Nov 22, 2016 • Tom Dinh • <a href="/2016/11/22/welcome-to-Tom's-blog/#disqus_thread">0 Comments</a></span>
             <h2>
               <a class="post-link" href="/2016/11/22/welcome-to-Tom's-blog/">Coming soon</a>
             </h2>
@@ -246,7 +246,7 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
           </li>
           
           <li>
-            <span class="post-meta">Nov 18, 2016 • Tom Dinh • <a href="https://tom031.github.io/2016/11/18/why-you-need-to-start-blogging/#disqus_thread">0 Comments</a></span>
+            <span class="post-meta">Nov 18, 2016 • Tom Dinh • <a href="/2016/11/18/why-you-need-to-start-blogging/#disqus_thread">0 Comments</a></span>
             <h2>
               <a class="post-link" href="/2016/11/18/why-you-need-to-start-blogging/">First post</a>
             </h2>
@@ -325,8 +325,8 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
         </div>
 
         <!--this is Side nav render-->
-        ﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')">
-    <md-list flex>
+        ﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right top-float" md-is-locked-open="$mdMedia('gt-md')">
+    <md-list class="top-float">
         <a href="/About/">
             <md-list-item class="md-3-line" ng-click="null">
                 <h3>About</h3>
@@ -337,7 +337,7 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
             <h3>Contact</h3>
         </md-list-item>
         <md-divider></md-divider>
-        <md-list-itemclass="md-2-line">
+        <md-list-item class="md-2-line">
             <div>
                 <!--Render hosting.html-->            
             <!--Include in rightSideNav.html -->
@@ -371,11 +371,12 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
     </div>
             </div>
         </md-list-item>
-        <md-divider></md-divider>
-    </md-list>
-    <span flex></span>
-    <h4 class="description" style=" float: right">I want to build my own blog, so this is it.</h4>
+        <md-divider></md-divider>        
+        
+    </md-list>    
+    <h4 class="description" class="top-float">I want to build my own blog, so this is it.</h4>
 </md-sidenav>
+
     </div>
     <!--this is JS files render-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -387,7 +388,22 @@ id="toggleSidenav" aria-label="Menu" ng-click="openSidenav()">
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
 <script id="dsq-count-scr" src="//tom031.disqus.com/count.js" async></script>
 <script src="/js/myApp.js"></script>
+
+
+    <!--this is googleAnalytics-->
+     
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90471948-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
  
+    
 </body>
 
 </html>

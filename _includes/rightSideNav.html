@@ -1,5 +1,5 @@
-﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right" md-is-locked-open="$mdMedia('gt-md')">
-    <md-list flex>
+﻿<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right top-float" md-is-locked-open="$mdMedia('gt-md')">
+    <md-list class="top-float">
         <a href="/About/">
             <md-list-item class="md-3-line" ng-click="null">
                 <h3>About</h3>
@@ -10,14 +10,14 @@
             <h3>Contact</h3>
         </md-list-item>
         <md-divider></md-divider>
-        <md-list-itemclass="md-2-line">
+        <md-list-item class="md-2-line">
             <div>
                 <!--Render hosting.html-->            
             {% include hostingLinks.html %}
             </div>
         </md-list-item>
-        <md-divider></md-divider>
-    </md-list>
-    <span flex></span>
-    <h4 class="description" style=" float: right">{{site.description}}</h4>
+        <md-divider></md-divider>        
+        
+    </md-list>    
+    <h4 class="description" class="top-float">{{site.description}}</h4>
 </md-sidenav>
