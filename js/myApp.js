@@ -16,28 +16,14 @@
 
     app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData) {
 
-        //TODO: hosting link changing
-        $scope.domainname = null;
-        var hosting = document.domain;
-        console.log(hosting);
-        if (hosting.match(/github/gi)) {
-            return $scope.domainname = 'github';
-        }
-        else if (hosting.match(/azure/gi)) {
-            return $scope.domainname = 'azure';
-        }
-        else if (hosting.match(/aws|amazon/gi)) {
-            return $scope.domainname = 'aws';
-        }
-        else ($scope.domainname = 'localhost');
-
         //TODO: sideNav controlling
         //screen size variable
         $scope.screenSize = $scope.$watch(function () {
             return $mdMedia('(min-width: 1610px)');
         }, function (trueOrfalse) {
+            console.log("ScreenSize",trueOrfalse);
             return $scope.screenSize = trueOrfalse;
-        })
+        });
 
         this.isOpen = false;
         this.hover = false;
@@ -48,45 +34,63 @@
                 return $scope.screenSize;
             },
             function (openOrNot) {
+                console.log("Nav open?",openOrNot);
                 $scope.buttonSidenav = openOrNot;
             });
+
         $scope.openSidenav = function () {
             $mdSidenav('right').open().then(function (isOpenRight = true) {
-                $log.debug("close RIGHT is done");
-                console.log("true isOpenRight", isOpenRight);
+                console.log("isOpenRight", isOpenRight);
             });
         };
         $scope.closeSidenav = function () {
             $mdSidenav('right').close().then(function (isOpenRight = false) {
-                $log.debug("close RIGHT is done");
-                console.log("false isOpenRight", isOpenRight);
+                console.log("isOpenRight", isOpenRight);
                 //$scope.isOpenRight = false;
             });
         };
 
+        //TODO: hosting link changing
+        $scope.domainname = null;
+        var hosting = document.domain;
+        console.log("host on",hosting);
+        if (hosting.match(/github/gi)) {
+            return $scope.domainname = 'github';
+        }
+        else if (hosting.match(/azure/gi)) {
+            return $scope.domainname = 'azure';
+        }
+        else if (hosting.match(/aws|amazon/gi)) {
+            return $scope.domainname = 'aws';
+        }
+        else ($scope.domainname = 'localhost');
         //TODO: Read Json data
-        var init = function () {
-            var hostDataUrl = '/jsonfiles/hosting.json';
-            getData.get(hostDataUrl).then(function successCallback(response) {
-                $scope.hostData = response.data;
-                console.log(response.data);
-            }), function (response) {
-                //defer.reject('could not find someFile.json');
-                console.log(response.data);
+        if ($scope.domainname !== ('aws' || 'localhost')) {
+            var init = function () {
+                var hostDataUrl = '/jsonfiles/hosting.json';
+                getData.get(hostDataUrl).then(function successCallback(response) {
+                    $scope.hostData = response.data;
+                    console.log(response.data);
+                }), function (response) {
+                    //defer.reject('could not find someFile.json');
+                    console.log(response.data);
+                };
             };
-        };
-        init();
-        $scope.$on('$viewContentLoaded', function () {
-            var hostDataUrl = '/jsonfiles/hosting.json';
-            getData.get(hostDataUrl).then(function successCallback(response) {
-                $scope.hostData = response.data;
-                console.log(response.data.hostProviders[0]);
-            }), function (response) {
-                //defer.reject('could not find someFile.json');
-                console.log(response.data);
-            };
-            console.log("content loaded", response.data);
-        });
+            init();
+            $scope.$on('$viewContentLoaded', function () {
+                var hostDataUrl = '/jsonfiles/hosting.json';
+                getData.get(hostDataUrl).then(function successCallback(response) {
+                    $scope.hostData = response.data;
+                    console.log(response.data.hostProviders[0]);
+                }), function (response) {
+                    //defer.reject('could not find someFile.json');
+                    console.log(response.data);
+                };
+                console.log("content loaded", response.data);
+            });
+        } else {
+            console.log("can't accsess files")
+        }
     });
 
     //TODO run the slide show
@@ -109,11 +113,15 @@
                     return mdTabsCtrl.select(0);
                 }, tabsAutoplayDelay);
 
-                var cleanup = function () {
-                    $interval.cancel(tabsAutoplayInterval);
-                    elm.off('click', cleanup);
+                var extenT = function () {
+                    attrs.tabsAutoplay += 5000;
                 };
-                elm.on('click', cleanup);
+
+                var cleanup = function () {
+                $interval.cancel(tabsAutoplayInterval);
+                elm.off('click', cleanup);
+                };
+                elm.on('click', extenT);
                 scope.$on('$destroy', cleanup);
             },
         }
