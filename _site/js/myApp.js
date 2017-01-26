@@ -14,6 +14,17 @@ app.factory('getData', function ($http) {
 });
 
 app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData) {
+    $scope.$on('$viewContentLoaded', function () {
+        var hostDataUrl = '/jsonfiles/hosting.json';
+        getData.get(hostDataUrl).then(function successCallback(response) {
+            $scope.hostData = response.data;
+            console.log(response.data.hostProviders[0]);
+        }), function (response) {
+            defer.reject('could not find someFile.json');
+            console.log(response.data);
+        };
+        console.log("content loaded",response.data);
+    });
 
     //TODO: hosting link changing
     $scope.domainname = null;
