@@ -18,7 +18,7 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
     //TODO: hosting link changing
     $scope.domainname = null;
     var hosting = document.domain;
-    console.log(hosting);    
+    console.log(hosting);
     if (hosting.match(/github/gi)) {
         return $scope.domainname = 'github';
     }
@@ -29,15 +29,22 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
         return $scope.domainname = 'aws';
     }
     else ($scope.domainname = 'localhost');
-   
+
     //TODO: sideNav controlling
+    //screen size variable
+    $scope.screenSize = $scope.$watch(function () {
+        return $mdMedia('(min-width: 1610px)');
+    }, function (trueOrfalse) {
+        return $scope.screenSize = trueOrfalse;
+    })
+
     this.isOpen = false;
     this.hover = false;
     var isOpenRight;
 
     $scope.buttonSidenav = $scope.$watch(
         function () {
-            return $mdMedia('gt-md');
+            return $scope.screenSize;
         },
         function (openOrNot) {
             $scope.buttonSidenav = openOrNot;
@@ -54,18 +61,20 @@ app.controller('appCtrl', function ($scope, $mdSidenav, $log, $mdMedia, getData)
             console.log("false isOpenRight", isOpenRight);
             //$scope.isOpenRight = false;
         });
-
     };
 
     //TODO: Read Json data
-    var hostDataUrl = '/jsonfiles/hosting.json';
-    getData.get(hostDataUrl).then(function successCallback(response) {
-        $scope.hostData = response.data;
-        console.log(response.data.hostProviders[0]);
-    }), function (response) {
-        defer.reject('could not find someFile.json');
-        console.log(response.data);
+    var init = function () {
+        var hostDataUrl = '/jsonfiles/hosting.json';
+        getData.get(hostDataUrl).then(function successCallback(response) {
+            $scope.hostData = response.data;
+            console.log(response.data.hostProviders[0]);
+        }), function (response) {
+            defer.reject('could not find someFile.json');
+            console.log(response.data);
+        };
     };
+    init();
 });
 
 //TODO run the slide show
