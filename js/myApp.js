@@ -53,6 +53,7 @@
         //TODO: hosting link changing
         $scope.domainname = null;
         var hosting = document.domain;
+        $scope.fullDomainName = document.domain;
         console.log("host on",hosting);
         if (hosting.match(/github/gi)) {
             return $scope.domainname = 'github';

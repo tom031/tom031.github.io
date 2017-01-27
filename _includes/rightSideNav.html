@@ -17,6 +17,9 @@
         {% include hostingLinks.html %}
     </div>
     <div class="description">
-        <h4 >{{site.description}}</h4>
+        <h4>{{site.description}}</h4>
+        <h5>The last built was at: {{site.time | date:"%c"}}<br/>{{site.time | date:"%Z"}}<br/>
+            <span ng-bind="fullDomainName"></span>
+        </h5>
     </div>
 </md-sidenav>

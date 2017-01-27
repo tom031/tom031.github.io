@@ -9,7 +9,8 @@ layout: default
   <md-divider></md-divider>
   <div flex="auto" flex-xs="100" md-whiteframe="1">   
     <h3>Magical things heppen in here!</h3>
-    {{site.time}}<br/>
+    <br/>
+     {{site.time | date_to_rfc822}}
     screenSize<p ng-bind="screenSize"></p>  
     buttonSidenav<p ng-bind="buttonSidenav"></p>
     domainname<p ng-bind="domainname"></p>  
@@ -25,7 +26,7 @@ layout: default
         <ul class="post-list">
           {% for post in paginator.posts %}
           <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} • {{ post.author }} • <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">0 Comments</a></span>
+            <span class="post-meta">{{ post.date | date_to_long_string }} • {{ post.author }} • <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">0 Comments</a></span>
             <h2>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
             </h2>
