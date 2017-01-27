@@ -11,9 +11,8 @@ layout: default
     <h3>Magical things heppen in here!</h3>
     <br/>
      {{site.time | date_to_rfc822}}
-    screenSize<p ng-bind="screenSize"></p>  
-    buttonSidenav<p ng-bind="buttonSidenav"></p>
-    domainname<p ng-bind="domainname"></p>  
+    <P>site.url {{site.url}}</P> 
+    {{site.baseurl}}
   </div>
 </div>
 <md-divider></md-divider>
@@ -26,7 +25,7 @@ layout: default
         <ul class="post-list">
           {% for post in paginator.posts %}
           <li>
-            <span class="post-meta">{{ post.date | date_to_long_string }} • {{ post.author }} • <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">0 Comments</a></span>
+            <span class="post-meta">{{ post.date | date_to_long_string }} • {{ post.author }} • <a href="{{ site.url }}{{ post.url }}#disqus_thread">0 Comments</a></span>
             <h2>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
             </h2>
