@@ -21,7 +21,7 @@
         $scope.screenSize = $scope.$watch(function () {
             return $mdMedia('(min-width: 1610px)');
         }, function (trueOrfalse) {
-            console.log("ScreenSize",trueOrfalse);
+            console.log("ScreenSize", trueOrfalse);
             return $scope.screenSize = trueOrfalse;
         });
 
@@ -34,7 +34,7 @@
                 return $scope.screenSize;
             },
             function (openOrNot) {
-                console.log("Nav open?",openOrNot);
+                console.log("Nav open?", openOrNot);
                 $scope.buttonSidenav = openOrNot;
             });
 
@@ -54,7 +54,7 @@
         $scope.domainname = null;
         var hosting = document.domain;
         $scope.fullDomainName = document.domain;
-        console.log("host on",hosting);
+        console.log("host on", hosting);
         if (hosting.match(/github/gi)) {
             return $scope.domainname = 'github';
         }
@@ -114,15 +114,12 @@
                     return mdTabsCtrl.select(0);
                 }, tabsAutoplayDelay);
 
-                var extenT = function () {
-                    attrs.tabsAutoplay += 5000;
-                };
 
                 var cleanup = function () {
-                $interval.cancel(tabsAutoplayInterval);
-                elm.off('click', cleanup);
+                    $interval.cancel(tabsAutoplayInterval);
+                    elm.off('click', cleanup);
                 };
-                elm.on('click', extenT);
+                elm.on('click', cleanup);
                 scope.$on('$destroy', cleanup);
             },
         }

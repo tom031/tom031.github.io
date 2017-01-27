@@ -18,7 +18,7 @@
 <img src="{{ site.baseurl }}{{ image.path }}" alt="coding kid" /> {% endif %} {% endfor %}
 
 
-<p>In high school, I learned to use the computer professionally, the first start with DOS Command lines and Windows them come
+<p>In high school, I learned to use the computer professionally, the first start with DOS Command lines and Windows then come
     to Pascal and C with Turbo Pascal, Borland Turbo C and FoxPro those are my first IDE ever. This time was simple I learned
     some code syntax as loops; switch; if and nested, just to solve some elementary algebra equations as Linear equation;
     Quadratic equation ... </p>
