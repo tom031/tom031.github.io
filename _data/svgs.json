@@ -34,5 +34,8 @@
     },
     "slideshare": {
         "svg_path": "/images/icons/slideshare.svg"
+    },
+    "aws": {
+        "svg_path": "/images/icons/AWScloud.svg"
     }
 }

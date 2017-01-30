@@ -1,17 +1,17 @@
-title: Tom's journey to the Code
+title: "Tom's journey to the Code"
 description: I want to build my own blog, so this is it.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 #infor
 fullname: Tom Dinh
-twitter_username: tomdinhnz
+twitter_username: 'tomdinhnz'
 twitter_link: https://twitter.com/tomdinhnz
 github_username:  tom031
 github_link: https://github.com/tom031
 linkedin: https://linkedin.com/in/tomdinhnz
 skype: tomdinhnz
-email: tomdinhnz@gmail.com
+scriptedEmail: "String.fromCharCode(116,111,109,100,105,110,104,110,122,64,103,109,97,105,108,46,99,111,109)"
 sof: https://stackoverflow.com/users/6716449/tom031
 slideshare: http://www.slideshare.net/dinhmanhhoang
 

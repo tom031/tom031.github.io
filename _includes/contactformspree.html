@@ -1,0 +1,92 @@
+<!--Include in Contacts.html-->
+<div layout="column" layout-padding ng-cloak flex>
+    <form id="contactform" name="contactform" novalidate ng-submit="save(contactform.$valid)" ng-class="{true:'error'}[submited]" flex>
+        <md-input-container class="md-block">
+            <!-- Name -->
+            <label>Name</label>
+            <input type="text" name="name" required="required" ng-model="client.name" minlength="2" md-maxlength="20" ng-pattern="/^[a-zA-Z0-9 {20}]+$/"
+                md-select-on-focus/>
+            <span ng-messages="contactform.name.$error" role="alert" multiple>
+                        <span ng-show="contactform.name.$error.required" ng-message="required">
+                        This is required.
+                        </span>
+            <span ng-show="contactform.name.$error.minlength" ng-message="minlength">
+                        Your name is too short.
+                        </span>
+            <span ng-message="md-maxlength">
+                        Your name is too long.
+                        </span>
+            <span ng-message="pattern">
+                        This is not a Human name.
+                        </span>
+            </span>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <input autocomplete="off" type="email" name="_replyto" placeholder="Your email" required="required" ng-model="client._replyto" minlength="5"
+                md-maxlength="100" ng-pattern="/^[a-zA-Z]+[a-zA-Z0-9._]+\x40[a-zA-Z]+\.[a-zA-Z.]{2,5}$/" />
+            <span ng-messages="contactform._replyto.$error" role="alert" multiple>
+                        <span ng-show="contactform._replyto.$error.required" ng-message="required">
+                        This is required.
+                        </span>
+            <span ng-show="contactform._replyto.$error.minlength" ng-message="minlength">
+                        Your email is too short.
+                        </span>
+            <span ng-message="md-maxlength">
+                        Your email is too long.
+                        </span>
+            <span ng-message="pattern">
+                        This is not a email.
+                        </span>
+            </span>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <input autocomplete="off" type="email" name="confirm" placeholder="Confirm your email" required="required" ng-model="client.confirm"  minlength="5"
+                md-maxlength="100" ng-pattern="client._replyto" />
+            <span ng-messages="contactform.confirm.$error" role="alert" multiple>
+                        <span ng-show="contactform._replyto.$error.required" ng-message="required">
+                        This is required.
+                        </span>
+            <span ng-show="contactform.confirm.$error.minlength" ng-message="minlength">
+                        Your email is too short.
+                        </span>
+            <span ng-message="md-maxlength">
+                        Your email is too long.
+                        </span>
+            <span ng-message="pattern">
+                        Wrong confirm email.
+                        </span>
+            </span>
+        </md-input-container>
+        <md-input-container flex>
+            <label>Your role</label>
+            <md-select name="_subject" ng-model="client._subject">                
+                <md-option value="Developer">Developer</md-option>
+                <md-option value="Programmer">Programmer</md-option>
+                <md-option value="Headhunter">Headhunter</md-option>
+                <md-option value="Recruiter">Recruiter</md-option>
+                <md-option value="Jedi">Jedi</md-option>
+                <md-option value="Ninja">Ninja</md-option>
+                <md-option value="Human">Human</md-option>
+                <md-option value="Miss World">Miss World</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <textarea ng-model="client.message" required="required" name="message" placeholder="Your message" minlength="5" md-maxlength="350"
+                rows="3"></textarea>
+            <span ng-messages="contactform.message.$error" role="alert" multiple>
+                        <span ng-show="contactform.message.$error.required" ng-message="required">
+                        This is required.
+                        </span>
+            <span ng-show="contactform.email.$message.minlength" ng-message="minlength">
+                        Your email is too short.
+                        </span>
+            <span ng-message="md-maxlength">
+                        Your email is too long.
+                        </span>
+            </span>
+        </md-input-container>
+        <input type="text" name="_gotcha" style="display:none" />
+<md-button class="md-raised md-primary" value="Send" ng-model="save" type="submit">Submit</md-button>
+</form>
+</div>

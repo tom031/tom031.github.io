@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<!--this is head render with CSS and Favicon  ng-click="openSidenav()"-->
+﻿<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>Tom's journey to the Code </title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" >
+    <script type="text/javascript" src="//secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+</head>
+
+
+<body ng-cloak ng-app="app">
+    <div layout="row" layout-xs="column" ng-controller="appCtrl">
+        <!-- this is Menu button render-->
+      <md-fab-speed-dial ng-click="openSidenav()" style="position: fixed;" ng-hide="buttonSidenav" class="md-fling md-fab-top-right"
+id="toggleSidenav" aria-label="Menu" >
+    <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-warn">
+            <ng-md-icon class="icon" icon="menu"></ng-md-icon>
+        </md-button>
+    </md-fab-trigger>
+</md-fab-speed-dial>
+
+        <div flex layout="column">
+            <!-- this is header render-->
+            <header>
+    <md-toolbar class="header-toolbal">
+        <div class="md-toolbar-tools">
+            <a href="https://linkedin.com/in/tomdinhnz">
+                <md-button aria-label="Logo">
+                    <img src="http://s.gravatar.com/avatar/31793858d3a0ca4af25a1feb8b50a498?s=60"></img>
+                </md-button>
+            </a>
+            <h2>
+                  <a href="/"><span>Tom's journey to the Code</span></a>
+            </h2>
+        </div>
+    </md-toolbar>
+</header>
+
+
+            <!--this is body render-->
+            <md-content md-whiteframe="14">
+                <md-card class="posttext">
+                    <div layout-gt-sm="row" layout="column">
+    <div flex-gt-sm="50">
+
+        <md-list>
+            <md-subheader class="md-no-sticky">
+                <h2>
+                    <ng-md-icon icon="person_pin_circle" class="icon"></ng-md-icon>
+                    You can find me here:
+                </h2>
+            </md-subheader>
+            <md-divider></md-divider>
+            <a href="https://linkedin.com/in/tomdinhnz" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <ng-md-icon icon="linkedin-box" class="md-avatar"></ng-md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Linkkedin</h3>
+                        <p>https://linkedin.com/in/tomdinhnz</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <a href="https://github.com/tom031" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <ng-md-icon icon="github-circle" class="md-avatar"></ng-md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>GitHub</h3>
+                        <p>https://github.com/tom031</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <a href="https://stackoverflow.com/users/6716449/tom031" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <md-icon md-svg-src="/images/icons/stackoverflow.svg" class="md-avatar"></md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>StackOverFlow</h3>
+                        <p>https://stackoverflow.com/users/6716449/tom031</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <a href="http://www.slideshare.net/dinhmanhhoang" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <md-icon md-svg-src="/images/icons/slideshare.svg" class="md-avatar"></md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>SlideShare</h3>
+                        <p>http://www.slideshare.net/dinhmanhhoang</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <a href="https://twitter.com/tomdinhnz" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <ng-md-icon icon="twitter" class="md-avatar"></ng-md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Twitter</h3>
+                        <p>https://twitter.com/tomdinhnz</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+        </md-list>
+        <!--Skype button-->
+        <div id="SkypeButton_Call_tomdinhnz_1"></div>
+    </md-button>
+    </div>
+    <md-divider></md-divider>
+
+    <div flex-gt-sm="50">
+
+        <md-list>
+            <md-subheader class="md-no-sticky">
+                <h2>
+                    <ng-md-icon icon="person_add" class="icon"></ng-md-icon>
+                    Let's get in touch !
+                </h2>
+            </md-subheader>
+            <md-divider></md-divider>            
+            <a href="">
+                <md-list-item class="md-2-line" ng-click="null">
+                    <ng-md-icon icon="email" class="md-avatar"></ng-md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Email me</h3>
+                        <p>In order to avoid spammers, I'm developing a personnal cloudbase Two-factor authentication contact
+                            form using email with ASP.NET Identity. Meanwhile, you can go to my Linkedin account for my email
+                            and phone, or use the contact formspree below.</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <md-list-item>                
+            </md-list-item>            
+        </md-list>
+        <!--Include in Contacts.html-->
+<div layout="column" layout-padding ng-cloak flex>
+    <form id="contactform" name="contactform" novalidate ng-submit="save(contactform.$valid)" ng-class="{true:'error'}[submited]" flex>
+        <md-input-container class="md-block">
+            <!-- Name -->
+            <label>Name</label>
+            <input type="text" name="name" required="required" ng-model="client.name" minlength="2" md-maxlength="20" ng-pattern="/^[a-zA-Z0-9 {20}]+$/"
+                md-select-on-focus/>
+            <span ng-messages="contactform.name.$error" role="alert" multiple>
+                        <span ng-show="contactform.name.$error.required" ng-message="required">
+                        This is required.
+                        </span>
+            <span ng-show="contactform.name.$error.minlength" ng-message="minlength">
+                        Your name is too short.
+                        </span>
+            <span ng-message="md-maxlength">
+                        Your name is too long.
+                        </span>
+            <span ng-message="pattern">
+                        This is not a Human name.
+                        </span>
+            </span>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <input autocomplete="off" type="email" name="_replyto" placeholder="Your email" required="required" ng-model="client._replyto" minlength="5"
+                md-maxlength="100" ng-pattern="/^[a-zA-Z]+[a-zA-Z0-9._]+\x40[a-zA-Z]+\.[a-zA-Z.]{2,5}$/" />
+            <span ng-messages="contactform._replyto.$error" role="alert" multiple>
+                        <span ng-show="contactform._replyto.$error.required" ng-message="required">
+                        This is required.
+                        </span>
+            <span ng-show="contactform._replyto.$error.minlength" ng-message="minlength">
+                        Your email is too short.
+                        </span>
+            <span ng-message="md-maxlength">
+                        Your email is too long.
+                        </span>
+            <span ng-message="pattern">
+                        This is not a email.
+                        </span>
+            </span>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <input autocomplete="off" type="email" name="confirm" placeholder="Confirm your email" required="required" ng-model="client.confirm"  minlength="5"
+                md-maxlength="100" ng-pattern="client._replyto" />
+            <span ng-messages="contactform.confirm.$error" role="alert" multiple>
+                        <span ng-show="contactform._replyto.$error.required" ng-message="required">
+                        This is required.
+                        </span>
+            <span ng-show="contactform.confirm.$error.minlength" ng-message="minlength">
+                        Your email is too short.
+                        </span>
+            <span ng-message="md-maxlength">
+                        Your email is too long.
+                        </span>
+            <span ng-message="pattern">
+                        Wrong confirm email.
+                        </span>
+            </span>
+        </md-input-container>
+        <md-input-container flex>
+            <label>Your role</label>
+            <md-select name="_subject" ng-model="client._subject">                
+                <md-option value="Developer">Developer</md-option>
+                <md-option value="Programmer">Programmer</md-option>
+                <md-option value="Headhunter">Headhunter</md-option>
+                <md-option value="Recruiter">Recruiter</md-option>
+                <md-option value="Jedi">Jedi</md-option>
+                <md-option value="Ninja">Ninja</md-option>
+                <md-option value="Human">Human</md-option>
+                <md-option value="Miss World">Miss World</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <textarea ng-model="client.message" required="required" name="message" placeholder="Your message" minlength="5" md-maxlength="350"
+                rows="3"></textarea>
+            <span ng-messages="contactform.message.$error" role="alert" multiple>
+                        <span ng-show="contactform.message.$error.required" ng-message="required">
+                        This is required.
+                        </span>
+            <span ng-show="contactform.email.$message.minlength" ng-message="minlength">
+                        Your email is too short.
+                        </span>
+            <span ng-message="md-maxlength">
+                        Your email is too long.
+                        </span>
+            </span>
+        </md-input-container>
+        <input type="text" name="_gotcha" style="display:none" />
+<md-button class="md-raised md-primary" value="Send" ng-model="save" type="submit">Submit</md-button>
+</form>
+</div>   
+</div>
+</div>
+<script type="text/javascript">
+    Skype.ui({
+        "name": "dropdown",
+        "element": "SkypeButton_Call_tomdinhnz_1",
+        "participants": ["tomdinhnz"],
+        "imageSize": 32
+    });
+</script>
+                </md-card>
+            </md-content>
+
+            <!--this is footer render-->
+            <md-card>
+                <!--include in Default layout-->
+<footer md-whiteframe="2">
+    <h6>
+        <a href="https://linkedin.com/in/tomdinhnz">
+            <ng-md-icon icon="copyright" class="icon"></ng-md-icon>Tom Dinh. </a>
+        Hosted by
+        <a href="https://pages.github.com/" target='_blank'>
+            <ng-md-icon icon="github-box" class="icon"></ng-md-icon>
+        </a>
+        and
+        <a href="https://azure.microsoft.com" target='_blank'>
+            <md-icon md-svg-src="/images/icons/azure.svg" class="icon"></md-icon>
+        </a>
+        . Powered by
+        <a href="https://jekyllrb.com/" target='_blank'>
+            <md-icon md-svg-src="/images/icons/jekyll.svg" class="icon"></md-icon>
+        </a>
+        and
+        <a href="https://angularjs.org/" target='_blank'>
+            <md-icon md-svg-src="/images/icons/angular.svg" class="icon"></md-icon>
+        </a>
+    </h6>
+    <md-divider></md-divider>
+    <div class="row">
+        <a href="https://github.com/tom031" target='_blank'>
+            <md-button aria-label="github">
+                <ng-md-icon icon="github-circle" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://linkedin.com/in/tomdinhnz" target='_blank'>
+            <md-button aria-label="linkedin">
+                <ng-md-icon icon="linkedin-box" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://twitter.com/tomdinhnz" target='_blank'>
+            <md-button aria-label="twitter">
+                <ng-md-icon icon="twitter" class="icon"></ng-md-icon>
+            </md-button>
+        </a>
+        <a href="https://stackoverflow.com/users/6716449/tom031" target='_blank'>
+            <md-button aria-label="sof">
+                <md-icon md-svg-src="/images/icons/stackoverflow.svg"></md-icon>
+            </md-button>
+        </a>
+        <a href="/feed.xml">
+            <md-button aria-label="rss">
+                <md-icon md-svg-src="/images/icons/rss.svg"></md-icon>
+            </md-button>
+        </a>
+    </div>
+</footer>
+            </md-card>
+        </div>
+
+        <!--this is Side nav render-->
+        ﻿<!-- include in default layouts -->
+<md-sidenav flex md-whiteframe="3" md-component-id="right" class="md-sidenav-right top-float" md-is-locked-open="screenSize">
+    <md-list>
+        <a href="/About/">
+            <md-list-item class="md-3-line" ng-click="null">
+                <h3>About</h3>
+            </md-list-item>
+        </a>
+        <a href="/contacts/">
+        <md-divider></md-divider>
+        <md-list-item class="md-3-line" ng-click="null">
+            <h3>Contact Me</h3>
+        </md-list-item>
+        </a>
+        <md-divider></md-divider>
+    </md-list>
+    <div class="middle-float">
+        <!--Render hosting.html-->
+        <!--Include in rightSideNav.html -->
+<!--Make it loop and consume hosting.json -->
+<h3> This page also hosting on: </h3>
+    <div ng-show="domainname == 'localhost'" ng-hide="domainname !='localhost'">
+      <div>GitHub</div>
+      <a href="https://tom031.github.io" target="_blank">tom031.github.io</a>
+      <div>Azure</div>
+      <a href="http://tom031.azurewebsites.net" target="_blank">tom031.azurewebsites.net</a>
+      <div>AWS</div>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" target="_blank">tom031.s3-website-us-west-2.amazonaws.com/</a>
+    </div>
+    <div ng-show="domainname == 'azure'" ng-hide="domainname !='azure'">
+       <div>GitHub</div>
+      <a href="https://tom031.github.io" target="_blank">tom031.github.io</a>
+      <div>AWS</div>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" target="_blank">tom031.s3-website-us-west-2.amazonaws.com/</a>
+    </div>
+    <div ng-show="domainname == 'aws'" ng-hide="domainname !='aws'">
+      <div>GitHub</div>
+      <a href="https://tom031.github.io" target="_blank">tom031.github.io</a>
+      <div>Azure</div>
+      <a href="http://tom031.azurewebsites.net" target="_blank">tom031.azurewebsites.net</a>
+    </div>
+    <div ng-show="domainname == 'github'" ng-hide="domainname !='github'">
+      <div>Azure</div>
+      <a href="http://tom031.azurewebsites.net" target="_blank">tom031.azurewebsites.net</a>
+      <div>AWS</div>
+      <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" target="_blank">tom031.s3-website-us-west-2.amazonaws.com/</a>      
+    </div>
+    </div>
+    <div class="description">
+        <h4>I want to build my own blog, so this is it.</h4>
+        <h5>The last built was at: Tue Jan 31 02:17:11 2017<br/>New Zealand Summer Time<br/>
+            <span ng-bind="fullDomainName"></span>
+        </h5>
+    </div>
+</md-sidenav>
+    </div>
+    <!--this is googleAnalytics-->
+    
+    <!--this is JS files render-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+<script id="dsq-count-scr" src="//tom031-githubpages-blog.disqus.com/count.js" async></script>
+<script src="/js/myApp.js"></script>
+</body>
+
+</html>

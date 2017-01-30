@@ -1,0 +1,108 @@
+--- 
+layout: default 
+permalink: /contacts/ 
+---
+<div layout-gt-sm="row" layout="column">
+    <div flex-gt-sm="50">
+
+        <md-list>
+            <md-subheader class="md-no-sticky">
+                <h2>
+                    <ng-md-icon icon="person_pin_circle" class="icon"></ng-md-icon>
+                    You can find me here:
+                </h2>
+            </md-subheader>
+            <md-divider></md-divider>
+            <a href="{{site.linkedin}}" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <ng-md-icon icon="linkedin-box" class="md-avatar"></ng-md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Linkkedin</h3>
+                        <p>{{site.linkedin}}</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <a href="{{site.github_link}}" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <ng-md-icon icon="github-circle" class="md-avatar"></ng-md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>GitHub</h3>
+                        <p>{{site.github_link}}</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <a href="{{site.sof}}" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <md-icon md-svg-src="{{site.data.svgs.sof.svg_path}}" class="md-avatar"></md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>StackOverFlow</h3>
+                        <p>{{site.sof}}</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <a href="{{site.slideshare}}" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <md-icon md-svg-src="{{site.data.svgs.slideshare.svg_path}}" class="md-avatar"></md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>SlideShare</h3>
+                        <p>{{site.slideshare}}</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <a href="{{site.twitter_link}}" target='_blank'>
+                <md-list-item class="md-2-line" ng-click="null">
+                    <ng-md-icon icon="twitter" class="md-avatar"></ng-md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Twitter</h3>
+                        <p>{{site.twitter_link}}</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+        </md-list>
+        <!--Skype button-->
+        <div id="SkypeButton_Call_tomdinhnz_1"></div>
+    </md-button>
+    </div>
+    <md-divider></md-divider>
+
+    <div flex-gt-sm="50">
+
+        <md-list>
+            <md-subheader class="md-no-sticky">
+                <h2>
+                    <ng-md-icon icon="person_add" class="icon"></ng-md-icon>
+                    Let's get in touch !
+                </h2>
+            </md-subheader>
+            <md-divider></md-divider>            
+            <a href="">
+                <md-list-item class="md-2-line" ng-click="null">
+                    <ng-md-icon icon="email" class="md-avatar"></ng-md-icon>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>Email me</h3>
+                        <p>In order to avoid spammers, I'm developing a personnal cloudbase Two-factor authentication contact
+                            form using email with ASP.NET Identity. Meanwhile, you can go to my Linkedin account for my email
+                            and phone, or use the contact formspree below.</p>
+                    </div>
+                </md-list-item>
+            </a>
+            <md-divider></md-divider>
+            <md-list-item>                
+            </md-list-item>            
+        </md-list>
+        {% include contactformspree.html %}   
+</div>
+</div>
+<script type="text/javascript">
+    Skype.ui({
+        "name": "dropdown",
+        "element": "SkypeButton_Call_tomdinhnz_1",
+        "participants": ["tomdinhnz"],
+        "imageSize": 32
+    });
+</script>
