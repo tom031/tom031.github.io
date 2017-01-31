@@ -87,6 +87,7 @@
             </span>
         </md-input-container>
         <input type="text" name="_gotcha" style="display:none" />
-<md-button class="md-raised md-primary" value="Send" ng-model="save" type="submit">Submit</md-button>
+<md-button class="md-raised md-primary" value="Send" ng-model="save" type="submit" ng-click="clickLoad()" ng-hide="isLoading">Submit</md-button>
+<md-progress-circular md-mode="indeterminate" ng-show="isLoading" value="clickLoad.determinateValue"></md-progress-circular>
 </form>
 </div>

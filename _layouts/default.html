@@ -6,15 +6,16 @@
 <body ng-cloak ng-app="app">
     <div layout="row" layout-xs="column" ng-controller="appCtrl">
         <!-- this is Menu button render-->
-      {% include fabDial.html %}
+        {% include fabDial.html %}
         <div flex layout="column">
             <!-- this is header render-->
             {% include header.html %}
 
+
             <!--this is body render-->
             <md-content md-whiteframe="14">
                 <md-card class="posttext">
-                    {{ content }}
+                    {{ content }}                    
                 </md-card>
             </md-content>
 
@@ -28,11 +29,8 @@
         {%include rightSideNav.html %}
     </div>
     <!--this is googleAnalytics-->
-    {% if site.environment == 'production' %} 
-    {% include googleAnalytics.html %} 
-    {% endif %}
+    {% if site.environment == 'production' %} {% include googleAnalytics.html %} {% endif %}
     <!--this is JS files render-->
     {% include jsLib.html %}
 </body>
-
 </html>

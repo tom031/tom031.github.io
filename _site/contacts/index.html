@@ -19,7 +19,7 @@
 <body ng-cloak ng-app="app">
     <div layout="row" layout-xs="column" ng-controller="appCtrl">
         <!-- this is Menu button render-->
-      <md-fab-speed-dial ng-click="openSidenav()" style="position: fixed;" ng-hide="buttonSidenav" class="md-fling md-fab-top-right"
+        <md-fab-speed-dial ng-click="openSidenav()" style="position: fixed;" ng-hide="buttonSidenav" class="md-fling md-fab-top-right"
 id="toggleSidenav" aria-label="Menu" >
     <md-fab-trigger>
         <md-button aria-label="menu" class="md-fab md-warn">
@@ -44,6 +44,7 @@ id="toggleSidenav" aria-label="Menu" >
         </div>
     </md-toolbar>
 </header>
+
 
 
             <!--this is body render-->
@@ -110,10 +111,13 @@ id="toggleSidenav" aria-label="Menu" >
                 </md-list-item>
             </a>
             <md-divider></md-divider>
+            <md-list-item>
+                <!--Skype button-->
+                <div id="SkypeButton_Call_tomdinhnz_1"></div>
+            </md-list-item>
+
         </md-list>
-        <!--Skype button-->
-        <div id="SkypeButton_Call_tomdinhnz_1"></div>
-    </md-button>
+        </md-button>
     </div>
     <md-divider></md-divider>
 
@@ -127,20 +131,18 @@ id="toggleSidenav" aria-label="Menu" >
                 </h2>
             </md-subheader>
             <md-divider></md-divider>            
-            <a href="">
                 <md-list-item class="md-2-line" ng-click="null">
                     <ng-md-icon icon="email" class="md-avatar"></ng-md-icon>
                     <div class="md-list-item-text" layout="column">
                         <h3>Email me</h3>
                         <p>In order to avoid spammers, I'm developing a personnal cloudbase Two-factor authentication contact
                             form using email with ASP.NET Identity. Meanwhile, you can go to my Linkedin account for my email
-                            and phone, or use the contact formspree below.</p>
+                            and phone, or use the contact by <a href="https://formspree.io/">Formspree</a> below.</p>
                     </div>
-                </md-list-item>
-            </a>
+                </md-list-item>           
             <md-divider></md-divider>
-            <md-list-item>                
-            </md-list-item>            
+            <md-list-item>
+            </md-list-item>
         </md-list>
         <!--Include in Contacts.html-->
 <div layout="column" layout-padding ng-cloak flex>
@@ -231,19 +233,20 @@ id="toggleSidenav" aria-label="Menu" >
             </span>
         </md-input-container>
         <input type="text" name="_gotcha" style="display:none" />
-<md-button class="md-raised md-primary" value="Send" ng-model="save" type="submit">Submit</md-button>
+<md-button class="md-raised md-primary" value="Send" ng-model="save" type="submit" ng-click="clickLoad()" ng-hide="isLoading">Submit</md-button>
+<md-progress-circular md-mode="indeterminate" ng-show="isLoading" value="clickLoad.determinateValue"></md-progress-circular>
 </form>
-</div>   
 </div>
+    </div>
 </div>
 <script type="text/javascript">
     Skype.ui({
         "name": "dropdown",
         "element": "SkypeButton_Call_tomdinhnz_1",
         "participants": ["tomdinhnz"],
-        "imageSize": 32
+        "imageSize": 24
     });
-</script>
+</script>                    
                 </md-card>
             </md-content>
 
@@ -354,7 +357,7 @@ id="toggleSidenav" aria-label="Menu" >
     </div>
     <div class="description">
         <h4>I want to build my own blog, so this is it.</h4>
-        <h5>The last built was at: Tue Jan 31 02:17:11 2017<br/>New Zealand Summer Time<br/>
+        <h5>The last built was at: Tue Jan 31 15:00:05 2017<br/>New Zealand Summer Time<br/>
             <span ng-bind="fullDomainName"></span>
         </h5>
     </div>
@@ -373,5 +376,4 @@ id="toggleSidenav" aria-label="Menu" >
 <script id="dsq-count-scr" src="//tom031-githubpages-blog.disqus.com/count.js" async></script>
 <script src="/js/myApp.js"></script>
 </body>
-
 </html>

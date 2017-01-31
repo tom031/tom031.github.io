@@ -63,10 +63,13 @@ permalink: /contacts/
                 </md-list-item>
             </a>
             <md-divider></md-divider>
+            <md-list-item>
+                <!--Skype button-->
+                <div id="SkypeButton_Call_tomdinhnz_1"></div>
+            </md-list-item>
+
         </md-list>
-        <!--Skype button-->
-        <div id="SkypeButton_Call_tomdinhnz_1"></div>
-    </md-button>
+        </md-button>
     </div>
     <md-divider></md-divider>
 
@@ -80,29 +83,27 @@ permalink: /contacts/
                 </h2>
             </md-subheader>
             <md-divider></md-divider>            
-            <a href="">
                 <md-list-item class="md-2-line" ng-click="null">
                     <ng-md-icon icon="email" class="md-avatar"></ng-md-icon>
                     <div class="md-list-item-text" layout="column">
                         <h3>Email me</h3>
                         <p>In order to avoid spammers, I'm developing a personnal cloudbase Two-factor authentication contact
                             form using email with ASP.NET Identity. Meanwhile, you can go to my Linkedin account for my email
-                            and phone, or use the contact formspree below.</p>
+                            and phone, or use the contact by <a href="https://formspree.io/">Formspree</a> below.</p>
                     </div>
-                </md-list-item>
-            </a>
+                </md-list-item>           
             <md-divider></md-divider>
-            <md-list-item>                
-            </md-list-item>            
+            <md-list-item>
+            </md-list-item>
         </md-list>
-        {% include contactformspree.html %}   
-</div>
+        {% include contactformspree.html %}
+    </div>
 </div>
 <script type="text/javascript">
     Skype.ui({
         "name": "dropdown",
         "element": "SkypeButton_Call_tomdinhnz_1",
         "participants": ["tomdinhnz"],
-        "imageSize": 32
+        "imageSize": 24
     });
 </script>

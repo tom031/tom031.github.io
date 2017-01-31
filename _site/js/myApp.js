@@ -13,7 +13,7 @@
             },
             post: function (_data) {
                 var req = {
-                    method: "post",
+                    method: 'post',
                     data: _data,
                     url: '//formspree.io/' + String.fromCharCode(116, 111, 109, 100, 105, 110, 104, 110, 122) + String.fromCharCode(64) + String.fromCharCode(103, 109, 97, 105, 108) + '.' + String.fromCharCode(99, 111, 109),
                     dataType: "json"
@@ -24,7 +24,7 @@
         return sendData;
     });
 
-    app.controller('appCtrl', function ($scope, $mdSidenav, $mdMedia, $window, $mdDialog, $mdToast, sendData) {
+    app.controller('appCtrl', function ($scope, $mdSidenav, $mdMedia, $window, $mdDialog, $mdToast, $interval, sendData) {
 
         //TODO: sideNav controlling
         //screen size variable
@@ -35,21 +35,41 @@
             return $scope.screenSize = trueOrfalse;
         });
 
-        $scope.client = {};
+        // click load Progress Circular
+        var promise;
+        $scope.determinateValue = 0;
+        $scope.clickLoad = function () {
+            if (angular.isDefined(promise)) return;
+            //$scope.isLoading = true;
+            promise = $interval(function () {
+                if ($scope.determinateValue < 40) {
+                    $scope.determinateValue += 1;
+                    $scope.isLoading = true;
+                } else {
+                    $scope.isLoading = false;
+                    $interval.cancel(promise);
+                }
+            }, 40);
+        };
+        
+        // Dialog box $mdDialog
+        $scope.client = null;
         $scope.resetClient = angular.copy($scope.client);
-        $scope.save = function (valid) {
+        $scope.save = function (valid) {            
             if (valid) {
+                $scope.isLoading = true;
                 var clientData = $scope.client;
-
                 sendData.post(clientData).then(function successCallback(response) {
+
                     //("got it", response.data.next.length);
                     if (response.data.next.length != 0) {
                         $mdToast.show(
                             $mdToast.simple()
                                 .textContent('Contact sent!')
                                 .position('top right')
-                                .hideDelay(4000)
+                                .hideDelay(6000)
                         );
+                        $scope.isLoading = false;
                         var confirm = $mdDialog.confirm()
                             .title('Success!')
                             .textContent('Thank you for contacting me. I will keep in touch with you shortly !.')
