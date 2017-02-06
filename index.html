@@ -24,7 +24,9 @@ layout: default
         <ul class="post-list">
           {% for post in paginator.posts %}
           <li>
-            <span class="post-meta">{{ post.date | date_to_long_string }} • {{ post.author }} • <a href="{{ site.url }}{{ post.url }}#disqus_thread">0 Comments</a></span>
+            <span class="post-meta">{{ post.date | date_to_long_string }} • {{ post.author }} • 
+              <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" 
+              data-disqus-identifier='{{ post.date | date_to_string }}'>0 Comments</a></span>
             <h2>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
             </h2>

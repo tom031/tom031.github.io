@@ -5,7 +5,8 @@ author: Tom Dinh
 <div class="posttext">
 <md-card>
   <h2>{{ page.title }}</h2>
-  <p class="post-meta">{{ page.date | date_to_string }} • {{ page.author }} • <a href="{{ post.url }}#disqus_thread">0 Comments</a></p>
+  <p class="post-meta">{{ page.date | date_to_string }} • {{ page.author }} • 
+    <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier='{{ page.date | date_to_string }}'>0 Comments</a></p>
   <div class="row" >
     {{ content }}
   </div>
