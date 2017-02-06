@@ -37,5 +37,11 @@
     },
     "aws": {
         "svg_path": "/images/icons/AWScloud.svg"
+    },
+    "github": {
+        "svg_path": "/images/icons/github-logo.svg"
+    },
+    "footprints": {
+        "svg_path": "/images/icons/footprints.svg"
     }
 }

@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('app', ['ngMaterial', 'ngAnimate', 'ngMdIcons', 'ngMessages']);
+    var app = angular.module('app', ['ngMaterial', 'ngAnimate', 'ngMessages']);
 
     //TODO: Get Json File
     app.factory('sendData', function ($http) {
