@@ -316,12 +316,22 @@ id="toggleSidenav" aria-label="Menu" >
             </md-list-item>
         </a>
         <a href="/contacts/">
-        <md-divider></md-divider>
-        <md-list-item class="md-3-line" ng-click="null">
-            <h3>Contact Me</h3>
-        </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item class="md-3-line" ng-click="null">
+                <h3>Contact Me</h3>
+            </md-list-item>
         </a>
         <md-divider></md-divider>
+        <md-divider></md-divider>
+        <md-list-item class="md-3-line">
+            <div class="md-list-item-text" layout="column">
+                <h4>Download my CV</h4>
+                <p>     
+                    <a class="hiddenlink" href="/documents/CV/TomDinhJunWebDev.docx" download="TomDinhJunWebDev" alt="superman">.docx |<span> Last modified time: 2017-02-08 11:17:48 +1300</span></a>                                                  </p>
+                <p>      
+            <a class="hiddenlink" href="/documents/CV/TomDinhJunWebDev.pdf" download="TomDinhJunWebDev" alt="superman">.pdf |<span> Last modified time: 2017-02-08 11:17:54 +1300</span></a>                                                 </p>
+            </div>
+        </md-list-item>
     </md-list>
     <div class="middle-float">
         <!--Render hosting.html-->
@@ -355,12 +365,18 @@ id="toggleSidenav" aria-label="Menu" >
       <a href="http://tom031.s3-website-us-west-2.amazonaws.com/" target="_blank">tom031.s3-website-us-west-2.amazonaws.com/</a>      
     </div>
         <md-divider></md-divider>
-        <h3>Checkout My Lab <md-icon md-svg-src="/images/icons/footprints.svg"></md-icon> </h3>
+        <h3>Checkout My Lab
+            <md-icon md-svg-src="/images/icons/footprints.svg"></md-icon>
+        </h3>
         <a href="http://journeytothecode.co.nz" target="_blank">JourneyToTheCode.co.nz</a>
     </div>
     <div class="description">
         <h4>I want to build my own blog, so this is it.</h4>
+<<<<<<< HEAD
         <h5>The last built was at: Wed Feb  8 10:48:10 2017<br/>New Zealand Summer Time<br/>
+=======
+        <h5>The last built was at: Wed Feb  8 11:46:28 2017<br/>New Zealand Summer Time<br/>
+>>>>>>> azure-and-jekyll-part-1
             <span ng-bind="fullDomainName"></span>
         </h5>
     </div>
