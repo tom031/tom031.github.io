@@ -28,4 +28,8 @@
 <url>
 <loc>http://localhost:4000/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/documents/CV/TomDinhJunWebDev.pdf</loc>
+<lastmod>2017-02-08T11:17:54+13:00</lastmod>
+</url>
 </urlset>

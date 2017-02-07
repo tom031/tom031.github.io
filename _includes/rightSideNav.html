@@ -7,18 +7,32 @@
             </md-list-item>
         </a>
         <a href="/contacts/">
-        <md-divider></md-divider>
-        <md-list-item class="md-3-line" ng-click="null">
-            <h3>Contact Me</h3>
-        </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item class="md-3-line" ng-click="null">
+                <h3>Contact Me</h3>
+            </md-list-item>
         </a>
         <md-divider></md-divider>
+        <md-divider></md-divider>
+        <md-list-item class="md-3-line">
+            <div class="md-list-item-text" layout="column">
+                <h4>Download my CV</h4>
+                <p>{% for doc in site.static_files %} {% if doc.path contains 'documents/CV/TomDinhJunWebDev.docx' %}
+                    <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev" alt="superman">{{doc.extname}} |<span> Last modified time: {{doc.modified_time}}</span></a>{%
+                    endif %}{% endfor %}</p>
+                <p>{% for doc in site.static_files %} {% if doc.path contains 'documents/CV/TomDinhJunWebDev.pdf' %}
+            <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev" alt="superman">{{doc.extname}} |<span> Last modified time: {{doc.modified_time}}</span></a>{%
+            endif %}{% endfor %}</p>
+            </div>
+        </md-list-item>
     </md-list>
     <div class="middle-float">
         <!--Render hosting.html-->
         {% include hostingLinks.html %}
         <md-divider></md-divider>
-        <h3>Checkout My Lab <md-icon md-svg-src="{{site.data.svgs.footprints.svg_path}}"></md-icon> </h3>
+        <h3>Checkout My Lab
+            <md-icon md-svg-src="{{site.data.svgs.footprints.svg_path}}"></md-icon>
+        </h3>
         <a href="http://journeytothecode.co.nz" target="_blank">JourneyToTheCode.co.nz</a>
     </div>
     <div class="description">
