@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <title>First post</title>
+    <title>Go for a walk with Jekyll on a cloudy day: Part 1</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" >
     <script type="text/javascript" src="//secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
 </head>
@@ -52,15 +52,98 @@ id="toggleSidenav" aria-label="Menu" >
                 <md-card class="posttext">
                     <div class="posttext">
 <md-card>
-  <h2>First post</h2>
-  <p class="post-meta">18 Nov 2016 • Tom Dinh • 
-    <a href="#disqus_thread" data-disqus-identifier='18 Nov 2016'>0 Comments</a></p>
+  <h2>Go for a walk with Jekyll on a cloudy day: Part 1</h2>
+  <p class="post-meta">06 Feb 2017 • Tom Dinh • 
+    <a href="#disqus_thread" data-disqus-identifier='06 Feb 2017'>0 Comments</a></p>
   <div class="row" >
-    <p>“I would advise folks in software to do one thing, and that’s write. Learn how to write…It’s actually useful. You need to know how to express yourself. And it’s really tough for a lot of engineers to step up and do public speaking.”</p>
+    <h3>Part 1: Deploy Jekyll on Azure</h3>
+<p> When I planned to create this blog, I also planned cloud-based my blog, this would be a piece of cake if I used WordPress because Azure with DreamSpark subscription allow the user to “one-click deploy” a WordPress on Azure. Jekyll is totally different (This is Jekyll on Azure, not GitHub-Pages)..</p>
 
-<p>“You don’t need to stop being a hardcore coder. Just add a little sprinkle of skills to express yourself.”</p>
+<p>Azure allow you to deploy by Git CLI (locally), as well as, continuous deployment with GitHub repo, but like GitHub-Pages, you can’t access the static files such as a JSON data file when your page is deploying, per my own experiences on my blog page in 5 cases after following those solutions.</p>
 
-<p>Mike Borozdin, an ex-Microsoft engineer.</p>
+<p><a href="https://channel9.msdn.com/Blogs/WinCoder/Develop-and-Deploy-Jekyll-Static-Blog-to-Azure-from-Visual-Studio-Code-with-Bash-on-Ubuntu-on-Window">Channel 9 Develop and Deploy Jekyll Static Blog to Azure from Visual Studio with Bash on Ubuntu on Windows</a></p>
+
+<p><a href="https://gordon-breuer.de/azure/2016/03/01/Publish-a-website-with-Jekyll-and-Github-on-Windows-Azure.html">Publish a website with Jekyll using extention on Azure</a></p>
+
+<p><a href="http://hintcoding.azurewebsites.net/azure/2016/04/16/deploy-jekyll-azure-app-service-one.html">Deploy Jekyll Azure App Service</a></p>
+
+<p>This is scenarios summarizing table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Scenarios</th>
+      <th style="text-align: center">Description</th>
+      <th style="text-align: right">Built Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="#Scenario1">1</a></td>
+      <td style="text-align: center">Used built in Jekyll extension on Azure</td>
+      <td style="text-align: right">Fail</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#Scenario2">2</a></td>
+      <td style="text-align: center">Not used built in Jekyll extension, using <strong>Git CLI</strong>  and <code class="highlighter-rouge">deploy.cmd</code> and <code class="highlighter-rouge">getruby.cmd</code></td>
+      <td style="text-align: right">Success</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#Scenario3">3</a></td>
+      <td style="text-align: center">Used built in Jekyll extension without <code class="highlighter-rouge">deploy.cmd</code> and <code class="highlighter-rouge">getruby.cmd</code></td>
+      <td style="text-align: right">Fail</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#Scenario4">4</a></td>
+      <td style="text-align: center">Used <code class="highlighter-rouge">.deployment</code> without extension</td>
+      <td style="text-align: right">Success</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#Scenario5">5</a></td>
+      <td style="text-align: center">Continuous deployment of Scenario 4 on GitHub repo</td>
+      <td style="text-align: right">Success</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="#Conclusion">Conclusion</a></p>
+<p>The very first step you need to setup a Azure App Service</p>
+<p>When you success created, this is how the Web root look like</p>
+
+<p><a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/Azure%20first%20init.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/Azure%20first%20init.jpg" border="0" alt=" photo Azure first init.jpg" /></a></p>
+
+<div id="Scenario1"><h3>Scenario 1: Used built in Jekyll extension on Azure</h3></div>
+<p>Step 2: install Jekyll extension</p>
+<p>In your Web App, go to Extension&gt;Add&gt;Jekyll.</p>
+<p><a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/add%20jekyll%20extention.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/add%20jekyll%20extention.jpg" border="0" alt=" photo add jekyll extention.jpg" /></a></p>
+<p>This is how the root look like with Extension added</p>
+<p><a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/Jekyll%20extention.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/Jekyll%20extention.jpg" border="0" alt=" photo Jekyll extention.jpg" /></a></p>
+<p>Step 3: Push and the Error</p>
+<p><a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/error%20deployment%20failse.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/error%20deployment%20failse.jpg" border="0" alt=" photo error deployment failse.jpg" /></a></p>
+
+<div id="Scenario2"><h3>Scenario 2: Not used built in Jekyll extension, using **Git CLI**  and `deploy.cmd` and `getruby.cmd`</h3></div>
+<p>When you push, Kudu is smart enough to using <code class="highlighter-rouge">deploy.cmd</code> and <code class="highlighter-rouge">getruby.cmd</code> to setup evething up for you on the cloud like running in localhost environment with <code class="highlighter-rouge">jekyll serve</code> command.</p>
+<p>And this is how the root look</p>
+<p><a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/noextentiondeploy.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/noextentiondeploy.jpg" border="0" alt=" photo noextentiondeploy.jpg" /></a></p>
+
+<div id="Scenario3"><h3>Scenario 3: Used built in Jekyll extension without `deploy.cmd` and `getruby.cmd`</h3></div>
+<p>after push the error page similar with Scenario 1, which is confict Ruby version.</p>
+
+<div id="Scenario4"><h3>Scenario 4: Used `.deployment` without extension</h3></div>
+<p><code>[config] <br />
+project = _site</code></p>
+<p>this 2 lines of code in `.deployment` are enough for Kudu to deploy your rendered page in _site folder.</p>
+<p><a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/PureJekyll.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/PureJekyll.jpg" border="0" alt=" photo PureJekyll.jpg" /></a></p>
+<div id="Scenario5"><h3>Scenario 5: Continuous deployment of Scenario 4 on GitHub repo</h3></div>
+<p>On your App go to Deployment option choose GitHub and branch.</p>
+<p><a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/github%20with%20pure%20jekyll.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/github%20with%20pure%20jekyll.jpg" border="0" alt=" photo github with pure jekyll.jpg" /></a></p>
+<p>Azure will automatically deploy your code after every commit you push on that branch.</p>
+<p><a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/continues%20deploy.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/continues%20deploy.jpg" border="0" alt=" photo continues deploy.jpg" /></a></p>
+
+<div id="Conclusion"><h3>Conclusion</h3></div>
+<p>The fail of Scenario 1 and 3 are cause by the confict of Ruby version of Jekyll’s runtime dependency on the server lead to not found the required bundler.</p>
+
+<p>Kudu is smart enough for deploy a hold environment or just a static files folder like scenario 2  and 4. Azure’s feature: continuous deployment is very handy for deploying code from GitHub.</p>
 
   </div>
   <md-divider></md-divider>
@@ -72,19 +155,19 @@ id="toggleSidenav" aria-label="Menu" >
     <ul>
         
         <li>
-          <a href="/2017/02/06/Go-for-a-walk-with-Jekyll-on-a-Cloudy-day-part-1/">Go for a walk with Jekyll on a cloudy day: Part 1</a>
-          <h5><span><i><h3>Part 1: Deploy Jekyll on Azure</h3> <p> When I planned to create this blog, I also planned cloud-based my blog, this would be...</i></span></h5>
-        </li>
-        
-        <li>
           <a href="/2017/02/04/Jekyll-I-choose-you/">Why I chose Jekyll for my blog</a>
           <h5><span><i><p> Well, since I choose Jekyll and GitHub-Pages to build up my own blog platform, my consideration includes many free, well-known CMS solutions...</i></span></h5>
         </li>
         
         <li>
           <a href="/2016/11/22/welcome-to-Tom's-blog/">Coming soon</a>
-          <h5><span><i>Coming soon
+          <h5><span><i><p>Coming soon</p>
 </i></span></h5>
+        </li>
+        
+        <li>
+          <a href="/2016/11/18/why-you-need-to-start-blogging/">First post</a>
+          <h5><span><i><p>“I would advise folks in software to do one thing, and that’s write. Learn how to write…It’s actually useful. You need to know...</i></span></h5>
         </li>
         
     </ul>
