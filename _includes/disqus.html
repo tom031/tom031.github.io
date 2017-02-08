@@ -6,7 +6,7 @@
 	<script type="text/javascript">
 		var disqus_shortname = '{{ site.disqus }}';
 		var disqus_config = function () {			
-			this.page.identifier = '{{ post.date }}';
+			this.page.identifier = '{{ post.url | prepend: site.baseurl }}';
 			//this.page.url = '{{ post.url | prepend: site.baseurl }}';
 			this.page.title = '{{ post.title }}';
 		};
