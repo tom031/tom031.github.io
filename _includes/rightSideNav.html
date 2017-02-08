@@ -18,10 +18,10 @@
             <div class="md-list-item-text" layout="column">
                 <h4>Download my CV</h4>
                 <p>{% for doc in site.static_files %} {% if doc.path contains 'documents/CV/TomDinhJunWebDev.docx' %}
-                    <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev" alt="superman">{{doc.extname}} |<span> Last modified time: {{doc.modified_time}}</span></a>{%
+                    <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev"><b>{{doc.extname}}</b> |<span> Last modified time: {{doc.modified_time}}</span></a>{%
                     endif %}{% endfor %}</p>
                 <p>{% for doc in site.static_files %} {% if doc.path contains 'documents/CV/TomDinhJunWebDev.pdf' %}
-            <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev" alt="superman">{{doc.extname}} |<span> Last modified time: {{doc.modified_time}}</span></a>{%
+            <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev" alt="superman"><b>{{doc.extname}}</b> |<span> Last modified time: {{doc.modified_time}}</span></a>{%
             endif %}{% endfor %}</p>
             </div>
         </md-list-item>
