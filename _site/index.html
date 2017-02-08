@@ -450,14 +450,24 @@ id="toggleSidenav" aria-label="Menu" >
     </div>
     <div class="description">
         <h4>I want to build my own blog, so this is it.</h4>
-        <h5>The last built was at: Thu Feb  9 12:27:56 2017<br/>New Zealand Summer Time<br/>
+        <h5>The last built was at: Thu Feb  9 12:29:26 2017<br/>New Zealand Summer Time<br/>
             <span ng-bind="fullDomainName"></span>
         </h5>
     </div>
 </md-sidenav>
     </div>
     <!--this is googleAnalytics-->
-    
+     <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90471948-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ 
     <!--this is JS files render-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
