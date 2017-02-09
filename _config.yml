@@ -1,4 +1,4 @@
-title: Tom's journey to the Code
+title: Journey to the Code blog
 description: I want to build my own blog, so this is it.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
@@ -28,7 +28,7 @@ defaults:
       type: posts
     values:
       layout: post
-      title: Tom Dinh's Blog
+      title: Tom Blog
       permalink: ""
       published: ""
       date : 2017-1-1

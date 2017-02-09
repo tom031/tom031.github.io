@@ -6,9 +6,24 @@ author: Tom Dinh
 <md-card>
   <h2>{{ page.title }}</h2>
   <p class="post-meta">{{ page.date | date_to_string }} • {{ page.author }} • 
-    <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier='{{ post.url }}'>0 Comments</a></p>
+    <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier='{{ page.url }}'>0 Comments</a></p>
   <div class="row" >
     {{ content }}
+  </div>
+  <div>
+    <br/>
+    page url {{page.url}} <br/>
+
+page id {{page.id}}
+<br/>
+post url {{post.url}}
+<br/>
+post id {{post.id}}
+<br/>
+page title {{page.title}}
+<br/>
+post title {{post.title}}
+
   </div>
   <md-divider></md-divider>
 </md-card>
