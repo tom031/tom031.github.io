@@ -4,13 +4,13 @@
 <div class="comments">
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
-		var disqus_shortname = '{{ site.disqus }}';
+		var disqus_shortname = '{{ site.disqus }}';		
 		var getProtocol = document.location.protocol;
-		var getDomain = document.domain;
+		var getDomain = document.domain;		
 		var disqus_config = function () {
 			this.page.identifier = '{{ page.id }}';
 			this.page.title = '{{ page.title }}';
-			this.page.url = getProtocol + '//' + getDomain + '{{ page.url }}';
+			//this.page.url = getProtocol + '//' + getDomain + '{{ page.url }}';
 			console.log(this.page.url);
 		};
 		(function () {
