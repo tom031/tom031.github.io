@@ -101,10 +101,13 @@ id="toggleSidenav" aria-label="Menu" >
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
 		var disqus_shortname = 'journeytothecode-blog';
-		var disqus_config = function () {			
-			this.page.identifier = '/2016/11/18/why-you-need-to-start-blogging';			
+		var getProtocol = document.location.protocol;
+		var getDomain = document.domain;
+		var disqus_config = function () {
+			this.page.identifier = '/2016/11/18/why-you-need-to-start-blogging';
 			this.page.title = 'First post';
-			this.page.url = 'http://localhost:4000/2016/11/18/why-you-need-to-start-blogging/';
+			this.page.url = getProtocol + '//' + getDomain + '/2016/11/18/why-you-need-to-start-blogging/';
+			console.log(this.page.url);
 		};
 		(function () {
 			var d = document, dsq = d.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -244,7 +247,7 @@ id="toggleSidenav" aria-label="Menu" >
     </div>
     <div class="description">
         <h4>I want to build my own blog, so this is it.</h4>
-        <h5>The last built was at: Thu Feb  9 22:05:39 2017<br/>New Zealand Summer Time<br/>
+        <h5>The last built was at: Thu Feb  9 22:30:46 2017<br/>New Zealand Summer Time<br/>
             <span ng-bind="fullDomainName"></span>
         </h5>
     </div>
