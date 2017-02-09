@@ -32,7 +32,7 @@ Scenarios| Description | Built Status
 
 [Conclusion](#Conclusion)
 <p>The very first step you need to setup a Azure App Service</p>
-<p>When you success created, this is how the Web root look like</p>
+<p>When you successed, this is how the Web root look like</p>
 
 <a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllandClouds/Azure%20first%20init.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllandClouds/Azure%20first%20init.jpg" border="0" alt=" photo Azure first init.jpg"/></a>
 
