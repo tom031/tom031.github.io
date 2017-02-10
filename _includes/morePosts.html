@@ -4,7 +4,7 @@
     <ul>
         {% for post in site.related_posts limit: 5 %}
         <li>
-          <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+          <a href="{{ post.url }}">{{post.title}}</a>
           <h5><span><i>{{ post.content | truncatewords:23 }}</i></span></h5>
         </li>
         {% endfor %}

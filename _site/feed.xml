@@ -1,13 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Journey to the Code blog</title>
+    <title>Tom's journey to the Code</title>
     <description>I want to build my own blog, so this is it.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Feb 2017 23:51:53 +1300</pubDate>
-    <lastBuildDate>Thu, 09 Feb 2017 23:51:53 +1300</lastBuildDate>
+    <pubDate>Sat, 11 Feb 2017 01:14:46 +1300</pubDate>
+    <lastBuildDate>Sat, 11 Feb 2017 01:14:46 +1300</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>How to: Jekyll and Disqus on mutiple domains</title>
+        <description>&lt;p&gt;In this article I defined some issues with Jekyll and Disqus on multiple domains, as well as solution and debug the encountered errors.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Due to the highlight code syntax executed. To display, the code below may wrong syntax. You need to reformat it on the right syntax before use. Thanks.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Issues&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Solution&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt; &lt;/th&gt;
+      &lt;th&gt;Errors&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Debug&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jekyll&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;#Section1&quot;&gt;Section 1&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#URL&quot;&gt;URL&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#URL&quot;&gt;URL&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Disqus&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;#Section2&quot;&gt;Section 2&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#Loaderrors&quot;&gt;Load errors&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#TrustedDomains&quot;&gt;Trusted Domains&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;define-issues&quot;&gt;Define issues&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Jekyll itself is a simple, blog-aware, static site generator with no databases needed, but it has site data under _data folder or any static files supported. Because GitHub-Pages was tailored to hosting on GitHub repo and deeply integrated with Jekyll, that why you need some tricks to hosting Jekyll and GitHub-Pages with multiple domain names or continuous delivery/deployment on your server.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Disqus a commenting system hosting service for websites and online communities, it provides you comment counting and comment widget, and you need to do the right configuration for Disqus if you want your blog’s comments hosting on multiple domain, as well as your blogs or websites.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id=&quot;Section1&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;solutions&quot;&gt;Solutions&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Section 1: Jekyll&lt;/strong&gt; 
+&lt;span id=&quot;URL&quot;&gt;&lt;/span&gt;
+Technically, Jekyll is a static site generator, it allowing you to host on any web server, it like you go in a time machine travel back to 90s, the earlier era of the Internet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gizmodo.com/5960831/23-ancient-web-sites-that-are-still-alive&quot;&gt;23 ancient web sites that are still alive&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The tricks for Jekyll to be able to host or continuous delivery/deployment to multiple server is inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; where 2 value:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl: &quot;&quot; &lt;/code&gt;# the subpath of your site, e.g. /blog&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;url: &quot;&quot;&lt;/code&gt; # the base hostname &amp;amp; protocol for your site&lt;/p&gt;
+
+&lt;p&gt;will define your hosting and domain name and you consuming data from it by using &lt;code class=&quot;highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;site.url&lt;/code&gt; in your page for internally links.&lt;/p&gt;
+
+&lt;p&gt;My suggestion is leave it all blank, without any predefine value Jekyll smart enough to get your current host and protocol, to prepend for your internally links. Your internal page navigation on different domains till working like nothing happen.&lt;/p&gt;
+
+&lt;div id=&quot;Section2&quot;&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Section 2: Disqus&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is a lot more to do with Disqus than Jekyll, from create your new &lt;code class=&quot;highlighter-rouge&quot;&gt;site/forum/disqus_shortname&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;JavaScript configuration variables&lt;/code&gt;.
+In this section, I just want to show the trick to config your disqus working on multiple domain.&lt;/p&gt;
+
+&lt;p&gt;If you don’t know how to add disqus into your Jekyll blog, there are many blog posts about it, or you can quickly go here: &lt;a href=&quot;http://sgeos.github.io/jekyll/disqus/2016/02/14/adding-disqus-to-a-jekyll-blog.html&quot;&gt;adding-disqus-to-a-jekyll-blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;On Disqus website&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create your site with your &lt;code class=&quot;highlighter-rouge&quot;&gt;disqus_shortname&lt;/code&gt; for your blog and then go to &lt;code class=&quot;highlighter-rouge&quot;&gt;Admin&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllDiscusHosing/Admin%20site.jpg.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllDiscusHosing/Admin%20site.jpg&quot; border=&quot;0&quot; alt=&quot; photo Admin site.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to &lt;code class=&quot;highlighter-rouge&quot;&gt;Setting&lt;/code&gt; and set your &lt;code class=&quot;highlighter-rouge&quot;&gt;Website URL&lt;/code&gt; with a default domain.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllDiscusHosing/WebsiteURL.jpg.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllDiscusHosing/WebsiteURL.jpg&quot; border=&quot;0&quot; alt=&quot; photo WebsiteURL.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This is importance&lt;/strong&gt; because even you have multiple domains you need to have a &lt;strong&gt;default domain&lt;/strong&gt; name for Disqus to be able to generate your &lt;code class=&quot;highlighter-rouge&quot;&gt;Discussions link&lt;/code&gt; for each of your post, and it also easy for you to &lt;code class=&quot;highlighter-rouge&quot;&gt;maintain/migrate/moderate&lt;/code&gt; your blog comments later.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; add your &lt;code class=&quot;highlighter-rouge&quot;&gt;Trusted Domains&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllDiscusHosing/trusteddomain.jpg.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllDiscusHosing/trusteddomain.jpg&quot; border=&quot;0&quot; alt=&quot; photo trusteddomain.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok, that is done for the Disqus setup, next you need to config JavaScript variables on your  development environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://help.disqus.com/customer/en/portal/articles/472098-javascript-configuration-variables&quot;&gt;&lt;strong&gt;JavaScript configuration variables&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Below is the code for &lt;code class=&quot;highlighter-rouge&quot;&gt;disqus_config&lt;/code&gt; function, two importance variables are:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;identifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;disqus_shortname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;disqus&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}};&lt;/span&gt;
+		&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;disqus_config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;identifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}};&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}};&lt;/span&gt;
+			&lt;span class=&quot;c1&quot;&gt;//this.page.url = // optional&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this.page.identifier&lt;/code&gt; should be unique, in this case you can use &lt;strong&gt;/2017/02/10/Jekyll-and-Disqus-on-multi-domains&lt;/strong&gt; this will return a relative link of your post, eg &lt;code class=&quot;highlighter-rouge&quot;&gt;/2016/11/22/welcome-to-Toms-blog&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this.page.title&lt;/code&gt; allowing Disqus to create a discussion hosting on Disqus with you post’s title.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this.page.url&lt;/code&gt; is optional but since you leave &lt;code class=&quot;highlighter-rouge&quot;&gt;site.url&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; blank , you need to get your protocol and domain with JavaScript or &lt;code class=&quot;highlighter-rouge&quot;&gt;site.url&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;page.url&lt;/code&gt; , due to &lt;code class=&quot;highlighter-rouge&quot;&gt;this.page.url&lt;/code&gt; required an &lt;strong&gt;absolute URL&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getProtocol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;protocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDomain&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;domain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;				
+&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getProtocol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'//'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDomain&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}};&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;or&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}};&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;extra&quot;&gt;Extra&lt;/h1&gt;
+
+&lt;p&gt;If your follow &lt;em&gt;Brendan A R Sechter’s&lt;/em&gt; instruction you may use &lt;strong&gt;disqus count&lt;/strong&gt;, to make it work on multiple domains you need extra &lt;code class=&quot;highlighter-rouge&quot;&gt;data dash variable&lt;/code&gt; in the htmt tag, it is &lt;code class=&quot;highlighter-rouge&quot;&gt;data-disqus-identifier&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;data-disqus-url&lt;/code&gt; (required &lt;code class=&quot;highlighter-rouge&quot;&gt;this.page.url&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;post&lt;/code&gt; layout the code will be&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}}#&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;disqus_thread&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-disqus-identifier=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;0 Comments&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In your &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; will look like&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}}#&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;disqus_thread&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;data-disqus-identifier=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;0 Comments&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;note&quot;&gt;Note:&lt;/h3&gt;
+
+&lt;p&gt;It will take around &lt;code class=&quot;highlighter-rouge&quot;&gt;20 mins&lt;/code&gt; for Disqus async your comments count on those link, so be patient it will update soon.&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;Loaderrors&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;errors-encountered&quot;&gt;Errors encountered&lt;/h2&gt;
+
+&lt;p&gt;Your page may have some errors like&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllDiscusHosing/errorloadJPG.jpg.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllDiscusHosing/errorloadJPG.jpg&quot; border=&quot;0&quot; alt=&quot; photo errorloadJPG.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllDiscusHosing/disqus-issue.jpg.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllDiscusHosing/disqus-issue.jpg&quot; border=&quot;0&quot; alt=&quot; photo disqus-issue.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It causes by &lt;strong&gt;Trusted Domains&lt;/strong&gt; in the initialize discussion link process on Disqus.
+&lt;span id=&quot;TrustedDomains&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;simplify&quot;&gt;Simplify&lt;/h3&gt;
+
+&lt;p&gt;When a post with load include Disqus Widget, it will create a &lt;code class=&quot;highlighter-rouge&quot;&gt;Discussion link&lt;/code&gt; hosting on Disqus, so be careful of the first load (you should use your &lt;strong&gt;default domain&lt;/strong&gt; to do the first/test load). If it not a &lt;strong&gt;Trusted Domains&lt;/strong&gt; it will not load the widget cause Disqus need to create a discussion first, ( if you test it on localhost when init link on &lt;strong&gt;default domain&lt;/strong&gt; finished, you need to restart Jekyll).&lt;/p&gt;
+
+&lt;p&gt;You can double check when is the Discussion link is created or not on Disqus.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllDiscusHosing/discusslinkJPG.jpg.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllDiscusHosing/discusslinkJPG.jpg&quot; border=&quot;0&quot; alt=&quot; photo discusslinkJPG.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any query please comment below. Happy blogging.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 10 Feb 2017 00:00:00 +1300</pubDate>
+        <link>http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains/</guid>
+        
+        
+        <category></category>
+        
+      </item>
     
       <item>
         <title>Go for a walk with Jekyll on a cloudy day: Part 1</title>

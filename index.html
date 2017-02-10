@@ -23,16 +23,16 @@ layout: default
           {% for post in paginator.posts %}
           <li>
             <span class="post-meta">{{ post.date | date_to_long_string }} • {{ post.author }} • 
-              <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" 
+              <a href="{{ post.url }}#disqus_thread" 
               data-disqus-identifier='{{ post.id }}'>0 Comments</a></span>
             <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+              <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
             </h2>
             <p>
               {{ post.content | truncatewords:43 }}
             </p>
             <md-card-actions layout="row" layout-align="end center">
-              <a href="{{ post.url | prepend: site.baseurl }}">see more ...</a>
+              <a href="{{ post.url }}">see more ...</a>
             </md-card-actions>
             <md-divider></md-divider>
           </li>

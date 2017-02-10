@@ -38,7 +38,7 @@ id="toggleSidenav" aria-label="Menu" >
                 </md-button>
             </a>
             <h2>
-                  <a href="/"><span>Journey to the Code blog</span></a>
+                  <a href="/"><span>Tom's journey to the Code</span></a>
             </h2>
         </div>
     </md-toolbar>
@@ -53,7 +53,7 @@ id="toggleSidenav" aria-label="Menu" >
 <md-card>
   <h2>Why I chose Jekyll for my blog</h2>
   <p class="post-meta">04 Feb 2017 • Tom Dinh • 
-    <a class="disqus-comment-count" href="#disqus_thread" data-disqus-identifier='/2017/02/04/Jekyll-I-choose-you'>0 Comments</a></p>    
+    <a href="#disqus_thread" data-disqus-identifier='/2017/02/04/Jekyll-I-choose-you'>0 Comments</a></p>    
   <div class="row" >
     <p>
 Well, since I choose Jekyll and GitHub-Pages to build up my own blog platform, my consideration includes many free, well-known CMS solutions such as WordPress, Joomla, Drupal …etc. However, I think I need an x-factor for myself, something makes me unique from a thousand bloggers out there (well, I can’t compare myself with English native speakers of course). </p>
@@ -83,6 +83,11 @@ That’s it, that is how I choose and develop this blog on Jekyll, but wait a mi
     <ul>
         
         <li>
+          <a href="/2017/02/10/Jekyll-and-Disqus-on-multi-domains/">How to: Jekyll and Disqus on mutiple domains</a>
+          <h5><span><i>In this article I defined some issues with Jekyll and Disqus on multiple domains, as well as solution and debug the encountered errors....</i></span></h5>
+        </li>
+        
+        <li>
           <a href="/2017/02/06/Go-for-a-walk-with-Jekyll-on-a-Cloudy-day-part-1/">Go for a walk with Jekyll on a cloudy day: Part 1</a>
           <h5><span><i><h3>Part 1: Deploy Jekyll on Azure</h3> <p> When I planned to create this blog, I also planned cloud-based my blog, this would be...</i></span></h5>
         </li>
@@ -105,32 +110,6 @@ That’s it, that is how I choose and develop this blog on Jekyll, but wait a mi
 
 
 <!--this is disqus render-->
-
-<!--include in post layouts-->
-
-
-<div class="comments">
-	<div id="disqus_thread"></div>
-	<script type="text/javascript">
-		var disqus_shortname = 'journeytothecode-blog';		
-		var getProtocol = document.location.protocol;
-		var getDomain = document.domain;		
-		var disqus_config = function () {
-			this.page.identifier = '/2017/02/04/Jekyll-I-choose-you';
-			this.page.title = 'Why I chose Jekyll for my blog';
-			//this.page.url = getProtocol + '//' + getDomain + '/2017/02/04/Jekyll-I-choose-you/';
-			console.log(this.page.url);
-		};
-		(function () {
-			var d = document, dsq = d.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			dsq.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(dsq);
-		})();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-
 
 </div>
                     
@@ -259,24 +238,14 @@ That’s it, that is how I choose and develop this blog on Jekyll, but wait a mi
     </div>
     <div class="description">
         <h4>I want to build my own blog, so this is it.</h4>
-        <h5>The last built was at: Thu Feb  9 23:51:53 2017<br/>New Zealand Summer Time<br/>
+        <h5>The last built was at: Sat Feb 11 01:14:46 2017<br/>New Zealand Summer Time<br/>
             <span ng-bind="fullDomainName"></span>
         </h5>
     </div>
 </md-sidenav>
     </div>
     <!--this is googleAnalytics-->
-     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-90471948-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
- 
+    
     <!--this is JS files render-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
