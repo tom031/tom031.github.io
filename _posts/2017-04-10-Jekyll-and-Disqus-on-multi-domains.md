@@ -159,4 +159,4 @@ You can double check when is the Discussion link is created or not on Disqus.
 
 <a href="http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllDiscusHosing/discusslinkJPG.jpg.html" target="_blank"><img src="http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllDiscusHosing/discusslinkJPG.jpg" border="0" alt=" photo discusslinkJPG.jpg"/></a>
 
-If you have any query please comment below. Happy blogging.
+If you have any question please comment below. Happy blogging.
