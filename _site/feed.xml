@@ -5,8 +5,8 @@
     <description>I want to build my own blog, so this is it.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Feb 2017 01:14:46 +1300</pubDate>
-    <lastBuildDate>Sat, 11 Feb 2017 01:14:46 +1300</lastBuildDate>
+    <pubDate>Tue, 14 Feb 2017 14:19:59 +1300</pubDate>
+    <lastBuildDate>Tue, 14 Feb 2017 14:19:59 +1300</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -190,7 +190,7 @@ In this section, I just want to show the trick to config your disqus working on 
 
 &lt;p&gt;&lt;a href=&quot;http://s498.photobucket.com/user/tom0313/media/Blog%20post/JekyllDiscusHosing/discusslinkJPG.jpg.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://i498.photobucket.com/albums/rr350/tom0313/Blog%20post/JekyllDiscusHosing/discusslinkJPG.jpg&quot; border=&quot;0&quot; alt=&quot; photo discusslinkJPG.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;If you have any query please comment below. Happy blogging.&lt;/p&gt;
+&lt;p&gt;If you have any question please comment below. Happy blogging.&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Feb 2017 00:00:00 +1300</pubDate>
         <link>http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains/</link>

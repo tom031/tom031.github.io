@@ -17,11 +17,11 @@
         <md-list-item class="md-3-line">
             <div class="md-list-item-text" layout="column">
                 <h4>Download my CV</h4>
-                <p>{% for doc in site.static_files %} {% if doc.path contains 'documents/CV/TomDinhJunWebDev.docx' %}
-                    <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev"><b>{{doc.extname}}</b> |<span> Last modified time: {{doc.modified_time}}</span></a>{%
+                <p>{% for doc in site.static_files %} {% if doc.path contains 'documents/CV/TomDinhJunWebDev-CV.docx' %}
+                    <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev-CV"><b>{{doc.extname}}</b> |<span> Last modified time: {{doc.modified_time}}</span></a>{%
                     endif %}{% endfor %}</p>
-                <p>{% for doc in site.static_files %} {% if doc.path contains 'documents/CV/TomDinhJunWebDev.pdf' %}
-            <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev" alt="superman"><b>{{doc.extname}}</b> |<span> Last modified time: {{doc.modified_time}}</span></a>{%
+                <p>{% for doc in site.static_files %} {% if doc.path contains 'documents/CV/TomDinhJunWebDev-CV.pdf' %}
+            <a class="hiddenlink" href="{{ site.baseurl }}{{ doc.path }}" download="TomDinhJunWebDev-CV"><b>{{doc.extname}}</b> |<span> Last modified time: {{doc.modified_time}}</span></a>{%
             endif %}{% endfor %}</p>
             </div>
         </md-list-item>
@@ -30,7 +30,7 @@
         <!--Render hosting.html-->
         {% include hostingLinks.html %}
         <md-divider></md-divider>
-        <h3>Checkout My Lab
+        <h3>Code Journeyers' Lab
             <md-icon md-svg-src="{{site.data.svgs.footprints.svg_path}}"></md-icon>
         </h3>
         <a href="http://journeytothecode.co.nz" target="_blank">JourneyToTheCode.co.nz</a>

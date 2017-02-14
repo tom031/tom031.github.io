@@ -46,7 +46,7 @@ paginate_path: /pages/page:num/
 theme: minima
 highlighter: rouge
 permalink: pretty #permalink in the front matter of your blog page will cause pagination to break
-version: 1.0.1
+version: 1.0.0
 encoding: utf-8
 environment: production
 gems:
