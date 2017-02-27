@@ -5,9 +5,223 @@
     <description>I want to build my own blog, so this is it.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Feb 2017 14:19:59 +1300</pubDate>
-    <lastBuildDate>Tue, 14 Feb 2017 14:19:59 +1300</lastBuildDate>
+    <pubDate>Tue, 28 Feb 2017 01:24:30 +1300</pubDate>
+    <lastBuildDate>Tue, 28 Feb 2017 01:24:30 +1300</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Build a Picture SlideShow with Jekyll and AngularJS + Angular Material</title>
+        <description>When I try to build something that make my blog look different with others' blog, I thing about building a slide show Pics. &lt;br/&gt;
+As you know, Jekyll was built on Liquid with limited features for DOM components. However, AngularJS and Angular Material are supported DOM with rich &lt;b&gt;UI/UX&lt;/b&gt; design because they were made for building **SPA**. So that the concept programming that I building up for myself through all the years was right. That philosophy is &quot;All programming languages can support each others, There is no something like 1 language rule them all&quot;. &lt;br/&gt;
+&lt;br/&gt;
+
+So I made it, a Slide Show of my gallery pictures which is a combination of &lt;i&gt;Liquid (Ruby)+ AngularJS + Angular Material&lt;/i&gt;.
+and this post I using &lt;b&gt;gist.github&lt;/b&gt; to highlight code due to Ruby code still executing while highlighting.
+&lt;br/&gt;
+
+
+&lt;script src=&quot;https://gist.github.com/tom031/be4073b7dc4e6617327b88c48c1b1f7a.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;h1&gt; It's Show time ! &lt;/h1&gt;
+
+
+&lt;!--Included in index.html--&gt;
+&lt;md-tabs class='slideshow' tabs-autoplay=&quot;5000&quot; md-align-tabs=&quot;bottom&quot; md-center-tabs=true md-autoselect=true md-dynamic-height=false&gt;
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/1.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/2.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/3.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/4.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/5.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/6.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/7.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/MSA.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/Whitireia.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+      
+        &lt;md-tab md-no-select-click=true&gt;
+        &lt;md-tab-label&gt;•&lt;/md-tab-label&gt;
+          &lt;md-tab-body&gt;
+              &lt;img class=&quot;slideshowPics&quot; src=&quot;/pictures/slideshowPics/firstDemoDay.jpg&quot; alt=&quot;image&quot; /&gt;
+          &lt;/md-tab-body&gt;
+        &lt;/md-tab&gt;
+      
+  
+&lt;/md-tabs&gt;
+
+&lt;br/&gt;
+&lt;i&gt;NOTE: stop the DOM moving, you need to &lt;b&gt;Choose&lt;/b&gt; one tab&lt;/i&gt;
+</description>
+        <pubDate>Mon, 27 Feb 2017 00:00:00 +1300</pubDate>
+        <link>http://localhost:4000/2017/02/27/slideshow-with-Jekyll-and-AngularJS/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/27/slideshow-with-Jekyll-and-AngularJS/</guid>
+        
+        
+        <category></category>
+        
+      </item>
     
       <item>
         <title>How to: Jekyll and Disqus on mutiple domains</title>
@@ -134,7 +348,7 @@ In this section, I just want to show the trick to config your disqus working on 
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this.page.identifier&lt;/code&gt; should be unique, in this case you can use &lt;strong&gt;/2017/02/10/Jekyll-and-Disqus-on-multi-domains&lt;/strong&gt; this will return a relative link of your post, eg &lt;code class=&quot;highlighter-rouge&quot;&gt;/2016/11/22/welcome-to-Toms-blog&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this.page.identifier&lt;/code&gt; should be unique, in this case you can use &lt;strong&gt;/2017/02/10/Jekyll-and-Disqus-on-multi-domains.1&lt;/strong&gt; this will return a relative link of your post, eg &lt;code class=&quot;highlighter-rouge&quot;&gt;/2016/11/22/welcome-to-Toms-blog&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this.page.title&lt;/code&gt; allowing Disqus to create a discussion hosting on Disqus with you post’s title.&lt;/p&gt;
@@ -193,8 +407,8 @@ In this section, I just want to show the trick to config your disqus working on 
 &lt;p&gt;If you have any question please comment below. Happy blogging.&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Feb 2017 00:00:00 +1300</pubDate>
-        <link>http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains/</guid>
+        <link>http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains.1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains.1/</guid>
         
         
         <category></category>

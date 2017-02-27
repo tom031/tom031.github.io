@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains/</loc>
+<loc>http://localhost:4000/2017/02/27/slideshow-with-Jekyll-and-AngularJS/</loc>
+<lastmod>2017-02-27T00:00:00+13:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2017/02/10/Jekyll-and-Disqus-on-multi-domains.1/</loc>
 <lastmod>2017-02-10T00:00:00+13:00</lastmod>
 </url>
 <url>
@@ -35,9 +39,5 @@
 <url>
 <loc>http://localhost:4000/documents/CV/TomDinhJunWebDev-CV.pdf</loc>
 <lastmod>2017-02-14T14:15:33+13:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/documents/CV/TomDinhJunWebDev.pdf</loc>
-<lastmod>2017-02-11T03:48:28+13:00</lastmod>
 </url>
 </urlset>
